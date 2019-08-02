@@ -61,23 +61,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番目の行が選択されました。")
-        //selectedText = gamelist[indexPath.row]
+        selectedText = gamelist[indexPath.row]
         
         table.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
         performSegue(withIdentifier: "showSecondView", sender: nil)
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showSecondView") {
             let secondVC: SecondViewController = (segue.destination as? SecondViewController)!
             
             // 11. SecondViewControllerのtextに選択した文字列を設定する
-            secondVC.text = selectedText!
+            secondVC.textL = selectedText!
             
             print("デリ")
         }
-    }*/
+    }
 
 }
 

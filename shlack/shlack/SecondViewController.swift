@@ -9,16 +9,19 @@
 import UIKit
 import RealmSwift
 
-
 class SecondViewController: UIViewController {
-
-    //var text: String?
-    
-    //@IBOutlet weak var label: UILabel!
+    var textL: String?
     
     override func viewDidLoad() {
        super.viewDidLoad()
         
-   // label.text = text
+        print(textL!)
+        
+        let label = UILabel()
+        label.text = textL
+        label.sizeToFit()
+        label.center = self.view.center
+        self.view.addSubview(label)
+     //label.text = text
     }
 }

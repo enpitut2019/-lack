@@ -11,7 +11,6 @@
 		4392280322F3BFF600D14CBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392280222F3BFF600D14CBF /* ViewController.swift */; };
 		4392280622F3BFF600D14CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4392280422F3BFF600D14CBF /* Main.storyboard */; };
 		4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4392280722F3BFF700D14CBF /* Assets.xcassets */; };
-		4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */; };
 		4392281622F3BFF700D14CBF /* shlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392281522F3BFF700D14CBF /* shlackTests.swift */; };
 		4392282122F3BFF700D14CBF /* shlackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282022F3BFF700D14CBF /* shlackUITests.swift */; };
 		98BD541822F3C9F600E73290 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BD541722F3C9F600E73290 /* SecondViewController.swift */; };
@@ -42,7 +41,6 @@
 		4392280222F3BFF600D14CBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4392280522F3BFF600D14CBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4392280722F3BFF700D14CBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4392280A22F3BFF700D14CBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4392280C22F3BFF700D14CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4392281122F3BFF700D14CBF /* shlackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shlackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4392281522F3BFF700D14CBF /* shlackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shlackTests.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				98BD541722F3C9F600E73290 /* SecondViewController.swift */,
 				4392280422F3BFF600D14CBF /* Main.storyboard */,
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
-				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
 				4392280C22F3BFF700D14CBF /* Info.plist */,
 			);
 			path = shlack;
@@ -258,7 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */,
 				4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */,
 				4392280622F3BFF600D14CBF /* Main.storyboard in Resources */,
 			);
@@ -371,14 +367,6 @@
 				4392280522F3BFF600D14CBF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4392280A22F3BFF700D14CBF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
