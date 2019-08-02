@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */; };
 		4392281622F3BFF700D14CBF /* shlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392281522F3BFF700D14CBF /* shlackTests.swift */; };
 		4392282122F3BFF700D14CBF /* shlackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282022F3BFF700D14CBF /* shlackUITests.swift */; };
+		4392282F22F3C79E00D14CBF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282E22F3C79E00D14CBF /* Item.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		4392281C22F3BFF700D14CBF /* shlackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shlackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4392282022F3BFF700D14CBF /* shlackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shlackUITests.swift; sourceTree = "<group>"; };
 		4392282222F3BFF700D14CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4392282E22F3C79E00D14CBF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,7 @@
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
 				4392280C22F3BFF700D14CBF /* Info.plist */,
+				4392282E22F3C79E00D14CBF /* Item.swift */,
 			);
 			path = shlack;
 			sourceTree = "<group>";
@@ -138,7 +141,6 @@
 				8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */,
 				0F80CB5703DEBE9E0F4130CC /* Pods-shlack.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -326,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4392280322F3BFF600D14CBF /* ViewController.swift in Sources */,
+				4392282F22F3C79E00D14CBF /* Item.swift in Sources */,
 				4392280122F3BFF600D14CBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
