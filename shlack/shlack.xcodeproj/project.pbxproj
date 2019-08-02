@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */; };
 		4392281622F3BFF700D14CBF /* shlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392281522F3BFF700D14CBF /* shlackTests.swift */; };
 		4392282122F3BFF700D14CBF /* shlackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282022F3BFF700D14CBF /* shlackUITests.swift */; };
+		98BD541822F3C9F600E73290 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98BD541722F3C9F600E73290 /* SecondViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		4392282222F3BFF700D14CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
+		98BD541722F3C9F600E73290 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			children = (
 				4392280022F3BFF600D14CBF /* AppDelegate.swift */,
 				4392280222F3BFF600D14CBF /* ViewController.swift */,
+				98BD541722F3C9F600E73290 /* SecondViewController.swift */,
 				4392280422F3BFF600D14CBF /* Main.storyboard */,
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
@@ -138,7 +141,6 @@
 				8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */,
 				0F80CB5703DEBE9E0F4130CC /* Pods-shlack.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -325,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98BD541822F3C9F600E73290 /* SecondViewController.swift in Sources */,
 				4392280322F3BFF600D14CBF /* ViewController.swift in Sources */,
 				4392280122F3BFF600D14CBF /* AppDelegate.swift in Sources */,
 			);

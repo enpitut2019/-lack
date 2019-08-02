@@ -44,6 +44,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="accessoryView" destination="0WE-p2-BCM" id="hTh-0l-sbG"/>
+                                </connections>
                             </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -51,11 +54,42 @@
                     </view>
                     <connections>
                         <outlet property="table" destination="8mg-6A-QyB" id="W5Y-uM-Il2"/>
+                        <segue destination="HEn-mY-uHy" kind="show" identifier="showSecondView" id="lGj-mc-F5i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="mP8-5I-Icr">
+            <objects>
+                <viewController id="HEn-mY-uHy" customClass="SecondViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcl-bZ-Gs5" customClass="SecondViewController">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AD4-L3-B7t">
+                                <rect key="frame" x="0.0" y="59" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="GAME" id="NGd-Eg-3q9">
+                                        <barButtonItem key="leftBarButtonItem" title="＜" id="c3W-eZ-d6h">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" id="HWt-ek-rsh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="YL5-C3-PCn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dl2-8r-GPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.69565217391312" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>

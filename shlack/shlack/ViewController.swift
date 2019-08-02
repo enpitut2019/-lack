@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var table: UITableView!
     
+    var selectedText: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -56,7 +58,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //戻り値の設定（表示する中身)
         return game
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(indexPath.row)番目の行が選択されました。")
+        //selectedText = gamelist[indexPath.row]
+        
+        table.deselectRow(at: indexPath, animated: true)
+        // 別の画面に遷移
+        performSegue(withIdentifier: "showSecondView", sender: nil)
+    }
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showSecondView") {
+            let secondVC: SecondViewController = (segue.destination as? SecondViewController)!
+            
+            // 11. SecondViewControllerのtextに選択した文字列を設定する
+            secondVC.text = selectedText!
+            
+            print("デリ")
+        }
+    }*/
 
 }
 
