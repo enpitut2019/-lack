@@ -19,9 +19,10 @@ class SecondViewController: UIViewController {
         
         let label = UILabel()
         label.text = textL
+        label.font = label.font.withSize(50)
         label.sizeToFit()
-        label.center = self.view.center
         self.view.addSubview(label)
+        label.center = self.view.center
      //label.text = text
     }
 }
