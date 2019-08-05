@@ -15,7 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var selectedText: String?
     
-    @IBAction func tapAddButton(_ sender: Any) {
+
+    /*@IBAction func tapAddButton(_ sender: Any) {
         //アラートダイアログを生成
         let alertController = UIAlertController(title: "ゲームの追加", message: nil, preferredStyle: UIAlertController.Style.alert)
         
@@ -58,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //    required init?(coder aDecoder: NSCoder) {
 //        super.init(coder: aDecoder)
 //
-//    }
+//    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
