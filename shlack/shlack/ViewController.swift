@@ -13,7 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     @IBOutlet weak var table: UITableView!
 
-    var selectedText: String?
+    var selectedName: String?
+    var selectedRule: String?
     
 
     /*@IBAction func tapAddButton(_ sender: Any) {
@@ -99,7 +100,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番目の行が選択されました。")
-        selectedText = gamelist?[indexPath.row].rule
+        selectedName = gamelist?[indexPath.row].name
+        selectedRule = gamelist?[indexPath.row].rule
         
         table.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
@@ -111,7 +113,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let secondVC: SecondViewController = (segue.destination as? SecondViewController)!
             
             // 11. SecondViewControllerのtextに選択した文字列を設定する
-            secondVC.textL = selectedText
+            secondVC.Name = selectedName
+            secondVC.Rule = selectedRule
             
             print("デリ")
         }

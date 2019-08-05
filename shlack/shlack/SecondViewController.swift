@@ -10,15 +10,14 @@ import UIKit
 import RealmSwift
 
 class SecondViewController: UIViewController {
-    var textL: String?
-    
+    var Name: String?
+    var Rule: String?
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label2: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(textL!)
         
         /*let label = UILabel()
         label.text = textL
@@ -26,6 +25,7 @@ class SecondViewController: UIViewController {
         label.sizeToFit()
         self.view.addSubview(label)
         label.center = self.view.center*/
-        label.text = textL
+        label.text = Name
+        label2.text = Rule
     }
 }
