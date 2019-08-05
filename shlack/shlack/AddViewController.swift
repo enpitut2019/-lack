@@ -15,11 +15,46 @@ class AddViewController: UIViewController {
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
     @IBAction func tapAddButton(_ sender: Any) {
+        if (textName.text != "" && textRule.text != ""){
         let game = Games()
         game.name = textName.text
         
         game.rule = textRule.text
         game.save()
+            
+            let title = "追加できました"
+            let message = "HOMEに戻りますか？"
+            let NoText = "NO"
+            
+            let NoButton = UIAlertAction(title: NoText, style: UIAlertAction.Style.cancel, handler: nil)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{(action: UIAlertAction!) in
+                
+                //アラートが消えるのと画面遷移が重ならないように0.5秒後に画面遷移するようにしてる
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    // 0.5秒後に実行したい処理
+                    self.performSegue(withIdentifier: "AddSuccess", sender: nil)
+                }
+            }
+            )
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            
+            present(alert, animated: true, completion: nil)
+            alert.addAction(NoButton)
+            alert.addAction(okAction)
+        }
+        
+        else{
+            let title = "追加できませんでした"
+            let message = "名前とルールの両方とも入力してください"
+            let okText = "OK"
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            let okayButton = UIAlertAction(title: okText, style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(okayButton)
+            
+            present(alert, animated: true, completion: nil)
+        }
     }
     override func viewDidLoad() {
     }
