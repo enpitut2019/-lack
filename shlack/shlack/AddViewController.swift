@@ -9,8 +9,18 @@ import UIKit
 import RealmSwift
 
 class AddViewController: UIViewController {
-    @IBOutlet weak var all: UIButton!
+
     
+    
+    @IBOutlet weak var textName: UITextField!
+    @IBOutlet weak var textRule: UITextView!
+    @IBAction func tapAddButton(_ sender: Any) {
+        let game = Games()
+        game.name = textName.text
+        
+        game.rule = textRule.text
+        game.save()
+    }
     override func viewDidLoad() {
     }
 }
