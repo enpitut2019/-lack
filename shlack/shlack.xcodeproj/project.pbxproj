@@ -15,6 +15,7 @@
 		4392281622F3BFF700D14CBF /* shlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392281522F3BFF700D14CBF /* shlackTests.swift */; };
 		4392282122F3BFF700D14CBF /* shlackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282022F3BFF700D14CBF /* shlackUITests.swift */; };
 		4392282F22F3C79E00D14CBF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282E22F3C79E00D14CBF /* Item.swift */; };
+		4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03949F22F7AF9100F9628D /* SecondViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		4392282022F3BFF700D14CBF /* shlackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shlackUITests.swift; sourceTree = "<group>"; };
 		4392282222F3BFF700D14CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4392282E22F3C79E00D14CBF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		4E03949F22F7AF9100F9628D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 			children = (
 				4392280022F3BFF600D14CBF /* AppDelegate.swift */,
 				4392280222F3BFF600D14CBF /* ViewController.swift */,
+				4E03949F22F7AF9100F9628D /* SecondViewController.swift */,
 				4392280422F3BFF600D14CBF /* Main.storyboard */,
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
@@ -330,6 +333,7 @@
 				4392280322F3BFF600D14CBF /* ViewController.swift in Sources */,
 				4392282F22F3C79E00D14CBF /* Item.swift in Sources */,
 				4392280122F3BFF600D14CBF /* AppDelegate.swift in Sources */,
+				4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

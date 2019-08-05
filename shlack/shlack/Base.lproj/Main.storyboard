@@ -23,8 +23,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="JHd-fX-fSD">
+                                        <rect key="frame" x="0.0" y="28" width="363" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHd-fX-fSD" id="0WE-p2-BCM">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="game" id="E4R-fl-6tC">
-                                        <rect key="frame" x="0.0" y="28" width="363" height="44"/>
+                                        <rect key="frame" x="0.0" y="84" width="363" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E4R-fl-6tC" id="Fa0-LR-diS">
                                             <rect key="frame" x="0.0" y="0.0" width="363" height="43.5"/>
@@ -37,14 +45,6 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ajp-tP-1sQ"/>
                                 </connections>
                             </tableView>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="JHd-fX-fSD">
-                                <rect key="frame" x="36" y="81" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHd-fX-fSD" id="0WE-p2-BCM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,11 +58,41 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="8mg-6A-QyB" id="W5Y-uM-Il2"/>
+                        <segue destination="hZj-I1-jgX" kind="show" identifier="showSecondView" id="OAk-qD-kKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="-147"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="-206.25"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="rFj-FI-vLC">
+            <objects>
+                <viewController id="hZj-I1-jgX" customClass="SecondViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sWw-u9-4l2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zo-3Q-50U">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="詳細" id="VdG-Va-YuR">
+                                        <barButtonItem key="leftBarButtonItem" title="＜" id="1wg-6G-sLw"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ol8-Wg-kyA"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" id="ZoO-ce-EhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tJ9-L0-y67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="-206"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cAf-cM-MJt">
@@ -80,7 +110,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GpL-6J-79S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289.85507246376812" y="-103.125"/>
+            <point key="canvasLocation" x="464" y="-206"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OAk-qD-kKe"/>
+        <segue reference="ZoO-ce-EhV"/>
+    </inferredMetricsTieBreakers>
 </document>

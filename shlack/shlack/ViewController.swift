@@ -12,6 +12,8 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var table: UITableView!
+
+    var selectedText: String?
     
     @IBAction func tapAddButton(_ sender: Any) {
         //アラートダイアログを生成
@@ -41,7 +43,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.gamelist.insert(gametext.text!, at: 0)*/
                 
                 //テーブルに行が追加されたことをテーブルに通知
-                self.table.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.right)
+                self.table.beginUpdates()
+                self.table.insertRows(at: [IndexPath(row: self.gamelist!.count-1, section: 0)], with: UITableView.RowAnimation.right)
+                self.table.endUpdates()
             }
         }
         //追加ボタンがタップされたときの処理
@@ -82,12 +86,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //変数を作る
         let game : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "game", for: indexPath)
         //取得したgameからn番目を変数に代入
+        
         let item: Games = gamelist![(indexPath as NSIndexPath).row]
+        //let item: Games = gamelist![indexPath.row]
         
         //変数の中身を作る
-        game.textLabel!.text = item.name//gamelist![indexPath.row].name
+        game.textLabel!.text = item.name
         //戻り値の設定（表示する中身)
         return game
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(indexPath.row)番目の行が選択されました。")
+        selectedText = gamelist?[indexPath.row].rule
+        
+        table.deselectRow(at: indexPath, animated: true)
+        // 別の画面に遷移
+        performSegue(withIdentifier: "showSecondView", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "showSecondView") {
+            let secondVC: SecondViewController = (segue.destination as? SecondViewController)!
+            
+            // 11. SecondViewControllerのtextに選択した文字列を設定する
+            secondVC.textL = selectedText
+            
+            print("デリ")
+        }
     }
 
 
