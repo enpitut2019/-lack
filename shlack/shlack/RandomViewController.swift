@@ -11,7 +11,8 @@ import RealmSwift
 class RandomViewController: UIViewController {
     
     @IBOutlet weak var gameName: UILabel!
-    @IBOutlet weak var gameRule: UITextView!
+    @IBOutlet weak var gameRule: UILabel!
+    
     
     @IBAction func Return(_ sender: Any) {
         let instance = ViewController()
