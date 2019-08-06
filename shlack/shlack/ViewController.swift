@@ -17,7 +17,7 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var table: UITableView!
-
+    
     var selectedName: String?
     var selectedRule: String?
     var selected1to3: Int = 0
@@ -30,9 +30,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         table.delegate = self
         table.dataSource = self
         
+        let tblBackColor: UIColor = UIColor.clear
+        table.backgroundColor = tblBackColor
+        //tableCell.backgroundColor = tblBackColor
         //realm  = try! Realm();
         //gamelist = realm!.objects(Games.self)
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //戻り値の設定(表示するcell数)

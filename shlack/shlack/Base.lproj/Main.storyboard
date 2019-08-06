@@ -161,7 +161,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="JHd-fX-fSD">
                                         <rect key="frame" x="0.0" y="28" width="363" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHd-fX-fSD" id="0WE-p2-BCM">
+                                        <tableViewCellContentView key="contentView" hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JHd-fX-fSD" id="0WE-p2-BCM">
                                             <rect key="frame" x="0.0" y="0.0" width="363" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -198,14 +198,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Yjw-hD-6Qt">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HYz-Cd-2PM">
-                            <connections>
-                                <action selector="tapAddButton:" destination="BYZ-38-t0r" id="oYC-lW-W9Q"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HYz-Cd-2PM"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="table" destination="8mg-6A-QyB" id="W5Y-uM-Il2"/>
+                        <outlet property="table" destination="8mg-6A-QyB" id="Vqy-Ad-0qc"/>
                         <segue destination="hZj-I1-jgX" kind="show" identifier="showSecondView" id="OAk-qD-kKe"/>
                     </connections>
                 </viewController>
