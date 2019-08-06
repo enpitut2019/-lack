@@ -19,7 +19,7 @@ class RandomSelectController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "showRandomView" && textNumber.text != "") {
+        if (segue.identifier == "showRandomView") {
             number = Int(textNumber.text!)!
             let SecondVC: RandomSecondController = (segue.destination as? RandomSecondController)!
             SecondVC.Number = number
