@@ -16,6 +16,10 @@ class Games: Object {
     @objc dynamic var name: String? = nil
     //ルール
     @objc dynamic var rule: String? = nil
+    //人数
+    @objc dynamic var number1to3: Int = 0
+    @objc dynamic var number4to6: Int = 0
+    @objc dynamic var numberOver7: Int = 0
     
     // データを保存。
     func save() {

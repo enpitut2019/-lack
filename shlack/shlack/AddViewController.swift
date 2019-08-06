@@ -10,16 +10,37 @@ import RealmSwift
 
 class AddViewController: UIViewController {
 
-    
+    var s1 = 1
+    var s2 = 1
+    var s3 = 1
     
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
+    @IBAction func switch1to3(_ sender: Any) {
+        s1 = (sender as AnyObject).isOn ? 1:0
+        print(s1)
+    }
+    @IBAction func switch4to6(_ sender: Any) {
+        s2 = (sender as AnyObject).isOn ? 1:0
+        print(s2)
+    }
+    @IBAction func switchOver7(_ sender: Any) {
+        s3 = (sender as AnyObject).isOn ? 1:0
+        print(s3)
+    }
+    
+    
     @IBAction func tapAddButton(_ sender: Any) {
-        if (textName.text != "" && textRule.text != ""){
+        if (textName.text != "" && textRule.text != "" && s1+s2+s3 != 0){
         let game = Games()
         game.name = textName.text
         
         game.rule = textRule.text
+        
+        game.number1to3 = s1
+        game.number4to6 = s2
+        game.numberOver7 = s3
+
         game.save()
             
             let title = "追加できました"
@@ -46,7 +67,13 @@ class AddViewController: UIViewController {
         
         else{
             let title = "追加できませんでした"
-            let message = "名前とルールの両方とも入力してください"
+            var message = ""
+            if(s1==0&&s2==0&&s3==0){
+                message = "０人じゃ遊べないじゃん。。。"
+            }
+            else{
+                message = "名前とルールの両方とも入力してください"
+            }
             let okText = "OK"
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
