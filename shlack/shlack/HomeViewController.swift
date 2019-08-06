@@ -8,9 +8,15 @@
 import UIKit
 import RealmSwift
 
+//game名を格納する配列
+var gamelist: Results<Games>?
+//Realmのインスタンスを初期化
+var realm : Realm? = nil
+
 class HomeViewController: UIViewController {
-    @IBOutlet weak var all: UIButton!
     
     override func viewDidLoad() {
+        realm  = try! Realm();
+        gamelist = realm!.objects(Games.self)
     }
 }

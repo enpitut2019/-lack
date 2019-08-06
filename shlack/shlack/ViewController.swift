@@ -9,8 +9,13 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+//game名を格納する配列
+//var gamelist: Results<Games>?
+//Realmのインスタンスを初期化
+//var realm : Realm? = nil
 
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var table: UITableView!
 
     var selectedName: String?
@@ -22,16 +27,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         table.delegate = self
         table.dataSource = self
         
-        realm  = try! Realm();
-        self.gamelist = self.realm!.objects(Games.self)
-        
+        //realm  = try! Realm();
+        //gamelist = realm!.objects(Games.self)
     }
-    
-    //game名を格納する配列
-    var gamelist: Results<Games>?
-    
-    //Realmのインスタンスを初期化
-    var realm : Realm? = nil // = try! Realm()
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //戻り値の設定(表示するcell数)
@@ -69,11 +67,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // 11. SecondViewControllerのtextに選択した文字列を設定する
             secondVC.Name = selectedName
             secondVC.Rule = selectedRule
-            
-            print("デリ")
         }
     }
-
+    
+    func createRandom()-> Games {
+        let n = gamelist?.count
+        print(gamelist)
+        let rdm = Int.random(in: 0..<(n)!)
+        return gamelist![rdm]
+    }
 
 }
 
