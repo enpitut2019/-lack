@@ -84,11 +84,10 @@ class AddViewController: UIViewController, UITextViewDelegate{
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.textRule.delegate = self
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-    func textFieldShouldReturn(textRule: UITextView) -> Bool {
-        textRule.resignFirstResponder()
-        return true
-    }
 }
