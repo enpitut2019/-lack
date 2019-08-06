@@ -18,6 +18,8 @@
 		4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03949F22F7AF9100F9628D /* SecondViewController.swift */; };
 		980B065E22F7F11700029256 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B065D22F7F11700029256 /* AddViewController.swift */; };
 		98566C3222F9014C00C16426 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98566C3122F9014C00C16426 /* RandomViewController.swift */; };
+		98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9922F9440C0062958F /* RandomSelectController.swift */; };
+		98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9B22F948250062958F /* RandomSecondController.swift */; };
 		98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F27A6122F7D46B0089DD24 /* HomeViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,8 @@
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 		980B065D22F7F11700029256 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		98566C3122F9014C00C16426 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
+		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
 		98F27A6122F7D46B0089DD24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +124,8 @@
 				4E03949F22F7AF9100F9628D /* SecondViewController.swift */,
 				980B065D22F7F11700029256 /* AddViewController.swift */,
 				98566C3122F9014C00C16426 /* RandomViewController.swift */,
+				98E77E9922F9440C0062958F /* RandomSelectController.swift */,
+				98E77E9B22F948250062958F /* RandomSecondController.swift */,
 				4392280422F3BFF600D14CBF /* Main.storyboard */,
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
@@ -339,8 +345,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */,
 				98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */,
 				4392280322F3BFF600D14CBF /* ViewController.swift in Sources */,
+				98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */,
 				980B065E22F7F11700029256 /* AddViewController.swift in Sources */,
 				98566C3222F9014C00C16426 /* RandomViewController.swift in Sources */,
 				4392282F22F3C79E00D14CBF /* Item.swift in Sources */,

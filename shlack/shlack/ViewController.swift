@@ -88,9 +88,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func createRandom()-> Games {
         let n = gamelist?.count
-        print(gamelist)
         let rdm = Int.random(in: 0..<(n)!)
         return gamelist![rdm]
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            var gamelistArray = Array(gamelist!)
+            try! realm!.write {
+                realm!.delete(gamelistArray[indexPath.row])
+                gamelist = realm!.objects(Games.self)
+            }
+            gamelistArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
     }
 
 }
