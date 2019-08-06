@@ -13,7 +13,7 @@
         <!--Home View Controller-->
         <scene sceneID="g8x-od-vT2">
             <objects>
-                <viewController id="KYz-f6-Tbl" customClass="HomeViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="KYz-f6-Tbl" customClass="HomeViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vTq-bI-OCW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,7 +92,7 @@
         <!--Random Select Controller-->
         <scene sceneID="ksC-cV-a7n">
             <objects>
-                <viewController id="Dvk-MC-7vc" customClass="RandomSelectController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="Dvk-MC-7vc" customClass="RandomSelectController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ap8-R8-8Li">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
         <!--Random Second Controller-->
         <scene sceneID="o6M-8t-7wJ">
             <objects>
-                <viewController id="P7a-Ru-pdl" customClass="RandomSecondController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="P7a-Ru-pdl" customClass="RandomSecondController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3o-UN-33A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@
         <!--Random View Controller-->
         <scene sceneID="gkl-sJ-DqD">
             <objects>
-                <viewController id="qY6-ee-W9J" customClass="RandomViewController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="qY6-ee-W9J" customClass="RandomViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jW1-Dq-4Vw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -360,7 +360,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -428,7 +428,7 @@
         <!--Add View Controller-->
         <scene sceneID="8Ck-1u-52V">
             <objects>
-                <viewController id="CHb-tq-2Sr" customClass="AddViewController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="CHb-tq-2Sr" customClass="AddViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ft5-5L-y6l" customClass="AddViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,15 +570,11 @@
         <!--Second View Controller-->
         <scene sceneID="rFj-FI-vLC">
             <objects>
-                <viewController id="hZj-I1-jgX" customClass="SecondViewController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="hZj-I1-jgX" customClass="SecondViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sWw-u9-4l2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="UIc-Jg-led">
-                                <rect key="frame" x="0.0" y="2" width="414" height="894"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7zo-3Q-50U">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -608,7 +604,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ルール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VR8-Or-u0C">
-                                <rect key="frame" x="14" y="322" width="92" height="67"/>
+                                <rect key="frame" x="14" y="333" width="92" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.29803036971830987" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -617,7 +613,7 @@
                                 <color key="shadowColor" red="0.77497571239999996" green="0.77462881130000005" blue="0.14777639100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CJ9-bI-kXe">
-                                <rect key="frame" x="46" y="397" width="348" height="385"/>
+                                <rect key="frame" x="46" y="374" width="348" height="385"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -638,6 +634,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="UIc-Jg-led">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ol8-Wg-kyA"/>
@@ -650,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJ9-L0-y67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-317" y="1336"/>
+            <point key="canvasLocation" x="-317.39130434782612" y="1316.5178571428571"/>
         </scene>
     </scenes>
     <resources>
@@ -658,7 +658,7 @@
         <image name="UNADJUSTEDNONRAW_thumb_3" width="676" height="1162"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fZX-2A-iZY"/>
+        <segue reference="DrT-qH-v5u"/>
         <segue reference="Bcr-6u-rvB"/>
         <segue reference="E6z-2b-2Yt"/>
     </inferredMetricsTieBreakers>

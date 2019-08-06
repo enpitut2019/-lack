@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextViewDelegate{
 
     var s1 = 0
     var s2 = 0
@@ -28,7 +28,6 @@ class AddViewController: UIViewController {
         s3 = (sender as AnyObject).isOn ? 1:0
         print(s3)
     }
-    
     
     @IBAction func tapAddButton(_ sender: Any) {
         if (textName.text != "" && textRule.text != "" && s1+s2+s3 != 0){
@@ -84,5 +83,12 @@ class AddViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.textRule.delegate = self
+    }
+    
+    func textFieldShouldReturn(textRule: UITextView) -> Bool {
+        textRule.resignFirstResponder()
+        return true
     }
 }
