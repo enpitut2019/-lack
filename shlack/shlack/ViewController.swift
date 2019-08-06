@@ -16,52 +16,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedName: String?
     var selectedRule: String?
     
-
-    /*@IBAction func tapAddButton(_ sender: Any) {
-        //アラートダイアログを生成
-        let alertController = UIAlertController(title: "ゲームの追加", message: nil, preferredStyle: UIAlertController.Style.alert)
-        
-        //テキストエリアを追加
-        alertController.addTextField { (gametext: UITextField!) -> Void in gametext.placeholder = "ゲーム名"}
-        alertController.addTextField { (ruletext: UITextField!) -> Void in ruletext.placeholder = "ルール"}
-        
-        //追加ボタンを追加
-        let sendAction = UIAlertAction(title: "追加", style: UIAlertAction.Style.default){
-            (ACTION: UIAlertAction) in
-            if let gametext = alertController.textFields?[0].text! {
-                
-                //入力値をデータベースに格納
-                let game = Games()
-                game.name = gametext
-                
-                if let ruletext = alertController.textFields?[1].text! {
-                    game.rule = ruletext
-                }
-                game.save()
-                
-                //self.gamelist = self.realm!.objects(Games.self)
-                
-                /*//配列に入力値を挿入。戦闘に挿入
-                self.gamelist.insert(gametext.text!, at: 0)*/
-                
-                //テーブルに行が追加されたことをテーブルに通知
-                self.table.beginUpdates()
-                self.table.insertRows(at: [IndexPath(row: self.gamelist!.count-1, section: 0)], with: UITableView.RowAnimation.right)
-                self.table.endUpdates()
-            }
-        }
-        //追加ボタンがタップされたときの処理
-        alertController.addAction(sendAction)
-        
-        //アラートダイアログを表示
-        present(alertController, animated: true, completion: nil)
-    }
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//
-//    }*/
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
