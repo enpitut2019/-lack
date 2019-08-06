@@ -10,9 +10,9 @@ import RealmSwift
 
 class AddViewController: UIViewController {
 
-    var s1 = 1
-    var s2 = 1
-    var s3 = 1
+    var s1 = 0
+    var s2 = 0
+    var s3 = 0
     
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
