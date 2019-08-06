@@ -99,11 +99,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             var gamelistArray = Array(gamelist!)
             try! realm!.write {
                 realm!.delete(gamelistArray[indexPath.row])
+                gamelist = realm!.objects(Games.self)
             }
             gamelistArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            print(gamelist)
         }
-    }
-    
+        }
+
 }
 
