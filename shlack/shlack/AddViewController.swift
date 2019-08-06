@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class AddViewController: UIViewController, UITextViewDelegate{
+class AddViewController: UIViewController {
 
     var s1 = 0
     var s2 = 0
@@ -83,12 +83,13 @@ class AddViewController: UIViewController, UITextViewDelegate{
         }
     }
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.textRule.delegate = self
     }
     
-    func textFieldShouldReturn(textRule: UITextView) -> Bool {
-        textRule.resignFirstResponder()
-        return true
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
