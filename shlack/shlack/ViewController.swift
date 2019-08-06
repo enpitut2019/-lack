@@ -48,6 +48,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //変数を作る
         let game : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "game", for: indexPath)
         //取得したgameからn番目を変数に代入
+        let grayClor = UIColor.white.withAlphaComponent(0.50)
+        game.backgroundColor = grayClor
         
         let item: Games = gamelist![(indexPath as NSIndexPath).row]
         //let item: Games = gamelist![indexPath.row]
