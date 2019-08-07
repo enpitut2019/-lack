@@ -9,36 +9,19 @@ import UIKit
 import RealmSwift
 
 class AddViewController: UIViewController {
-
-    var s1 = 0
-    var s2 = 0
-    var s3 = 0
     
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
-    @IBAction func switch1to3(_ sender: Any) {
-        s1 = (sender as AnyObject).isOn ? 1:0
-        print(s1)
-    }
-    @IBAction func switch4to6(_ sender: Any) {
-        s2 = (sender as AnyObject).isOn ? 1:0
-        print(s2)
-    }
-    @IBAction func switchOver7(_ sender: Any) {
-        s3 = (sender as AnyObject).isOn ? 1:0
-        print(s3)
-    }
+    @IBOutlet weak var textNumber: UITextField!
     
     @IBAction func tapAddButton(_ sender: Any) {
-        if (textName.text != "" && textRule.text != "" && s1+s2+s3 != 0){
+        if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
         let game = Games()
         game.name = textName.text
         
         game.rule = textRule.text
         
-        game.number1to3 = s1
-        game.number4to6 = s2
-        game.numberOver7 = s3
+        game.number = textNumber.text
 
         game.save()
             
@@ -67,8 +50,11 @@ class AddViewController: UIViewController {
         else{
             let title = "追加できませんでした"
             var message = ""
-            if(s1==0&&s2==0&&s3==0){
+            if(Int(textNumber.text!)! == 0){
                 message = "０人じゃ遊べないじゃん。。。"
+            }
+            else if textNumber.text == ""{
+                message = "人数を選択して下さい"
             }
             else{
                 message = "名前とルールの両方とも入力してください"
@@ -83,6 +69,7 @@ class AddViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        self.textNumber.keyboardType = UIKeyboardType.numberPad
     }
     
     override func didReceiveMemoryWarning() {

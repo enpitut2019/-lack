@@ -17,9 +17,8 @@ class Games: Object {
     //ルール
     @objc dynamic var rule: String? = nil
     //人数
-    @objc dynamic var number1to3: Int = 0
-    @objc dynamic var number4to6: Int = 0
-    @objc dynamic var numberOver7: Int = 0
+    @objc dynamic var number: String? = nil
+
     // データを保存。
     func save() {
         let realm = try! Realm()

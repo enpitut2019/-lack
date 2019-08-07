@@ -20,6 +20,7 @@
 		98566C3222F9014C00C16426 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98566C3122F9014C00C16426 /* RandomViewController.swift */; };
 		98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9922F9440C0062958F /* RandomSelectController.swift */; };
 		98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9B22F948250062958F /* RandomSecondController.swift */; };
+		98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98E77E9D22FA524A0062958F /* toooon.mp3 */; };
 		98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F27A6122F7D46B0089DD24 /* HomeViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		98566C3122F9014C00C16426 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
 		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
+		98E77E9D22FA524A0062958F /* toooon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toooon.mp3; sourceTree = "<group>"; };
 		98F27A6122F7D46B0089DD24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
 				4392282E22F3C79E00D14CBF /* Item.swift */,
+				98E77E9D22FA524A0062958F /* toooon.mp3 */,
 				4392280C22F3BFF700D14CBF /* Info.plist */,
 			);
 			path = shlack;
@@ -278,6 +281,7 @@
 			files = (
 				4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */,
 				4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */,
+				98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */,
 				4392280622F3BFF600D14CBF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,19 +10,24 @@ import UIKit
 import RealmSwift
 
 class RandomSelectController: UIViewController {
+    var RandomList: Results<Games>?
+    
     @IBOutlet weak var textNumber: UITextField!
     
-    var number: Int = 0
+    var numberText: String? = nil
     
     override func viewDidLoad() {
         self.textNumber.keyboardType = UIKeyboardType.numberPad
+       /* if numberText != "" {
+            RandomList = realm!.objects(Games.self).filter("number == $1", Int(numberText!)!)
+        }*/
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "showRandomView") {
-            number = Int(textNumber.text!)!
+            numberText = textNumber.text
             let SecondVC: RandomSecondController = (segue.destination as? RandomSecondController)!
-            SecondVC.Number = number
+            SecondVC.Number = Int(numberText!)!
         }
         else {
             let alert = UIAlertController(title: "検索できません", message: "数字を入力して下さい", preferredStyle: UIAlertController.Style.alert)

@@ -7,46 +7,35 @@
 //
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class RandomViewController: UIViewController {
     
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var gameRule: UILabel!
     @IBOutlet weak var gameNumber: UILabel!
+    var Numtext: String = "人以上で遊んでね"
+    
+    let toonPath = Bundle.main.bundleURL.appendingPathComponent("toooon.mp3")
+    
+    var toonPlayer = AVAudioPlayer()
     
     @IBAction func Return(_ sender: Any) {
         let instance = ViewController()
         let randomGame: Games =  instance.createRandom()
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        if randomGame.number1to3 == 1 {
-            if randomGame.number4to6 == 1{
-                if randomGame.numberOver7 == 1{
-                    gameNumber.text = "何人でも遊べるよ！"
-                }
-                else {
-                    gameNumber.text = "1~6人で遊んでね！"
-                }
-            }
-            else if randomGame.numberOver7 == 1{
-                gameNumber.text = "1~3人か７人以上で遊んでね！（？）"
-            }
-            else {
-                gameNumber.text = "1~3人で遊んでね！"
-            }
-        }
-        else if randomGame.number4to6 == 1{
-            if randomGame.numberOver7 == 1{
-                gameNumber.text = "4人以上で遊んでね！"
-            }
-            else{
-                gameNumber.text = "4~6人で遊んでね！"
-            }
-        }
-        else {
-            gameNumber.text = "7人以上で遊んでね！"
-        }
+        gameNumber.text = randomGame.number! + Numtext
         //gameNumber.text = String(randomGame.number)
+        
+        do {
+            toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
+        
+            toonPlayer.play()
+            }
+        catch{
+            print("ミストゥぅん")
+        }
     }
     
     override func viewDidLoad() {
@@ -55,30 +44,7 @@ class RandomViewController: UIViewController {
         let randomGame: Games =  instance.createRandom()
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        if randomGame.number1to3 == 1 {
-            if randomGame.number4to6 == 1{
-                if randomGame.numberOver7 == 1{
-                    gameNumber.text = "何人でも遊べるよ！"
-                }
-                else {
-                    gameNumber.text = "1~6人で遊んでね！"
-                }
-            }
-            else {
-                gameNumber.text = "1~3人で遊んでね！"
-            }
-        }
-        else if randomGame.number4to6 == 1{
-            if randomGame.numberOver7 == 1{
-                gameNumber.text = "4人以上で遊んでね！"
-            }
-            else{
-                gameNumber.text = "4~6人で遊んでね！"
-            }
-        }
-        else {
-            gameNumber.text = "7人以上で遊んでね！"
-        }
+        gameNumber.text = randomGame.number! + Numtext
         // Do any additional setup after loading the view.
     }
 }

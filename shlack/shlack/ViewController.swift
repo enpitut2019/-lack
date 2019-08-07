@@ -20,9 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var selectedName: String?
     var selectedRule: String?
-    var selected1to3: Int = 0
-    var selected4to6: Int = 0
-    var selectedOver7: Int = 0
+    var selectedNum: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +34,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //realm  = try! Realm();
         //gamelist = realm!.objects(Games.self)
     }
-    
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //戻り値の設定(表示するcell数)
@@ -64,9 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("\(indexPath.row)番目の行が選択されました。")
         selectedName = gamelist?[indexPath.row].name
         selectedRule = gamelist?[indexPath.row].rule
-        selected1to3 = (gamelist?[indexPath.row].number1to3)!
-        selected4to6 = (gamelist?[indexPath.row].number4to6)!
-        selectedOver7 = (gamelist?[indexPath.row].numberOver7)!
+        selectedNum = gamelist?[indexPath.row].number
         
         table.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
@@ -80,9 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // 11. SecondViewControllerのtextに選択した文字列を設定する
             secondVC.Name = selectedName
             secondVC.Rule = selectedRule
-            secondVC.N1to3 = selected1to3
-            secondVC.N4to6 = selected4to6
-            secondVC.N7 = selectedOver7
+            secondVC.Number = selectedNum
         }
     }
     
