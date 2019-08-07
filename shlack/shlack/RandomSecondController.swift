@@ -24,7 +24,7 @@ class RandomSecondController: UIViewController {
         let textNum: String = "人以上で遊んでね！"
         while k == 0 {
             randomGame = instance.createRandom()
-            if Int(randomGame.number!)! < Number  {
+            if Int(randomGame.number!)! <= Number  {
                 k = 1
             }
         }
