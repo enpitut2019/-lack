@@ -18,5 +18,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         realm  = try! Realm();
         gamelist = realm!.objects(Games.self)
+        
+        /*let sample = Games()
+        try! realm?.write{
+            sample.name = "サンプル"
+            sample.rule = "ここにルールを打ち込みます"
+            sample.number = "0"
+            realm?.add(sample)
+ }*/
     }
 }
