@@ -7,6 +7,7 @@
 //
 import UIKit
 import RealmSwift
+import AVFoundation
 
 class RandomSecondController: UIViewController {
     var Number: Int = 0
@@ -14,6 +15,10 @@ class RandomSecondController: UIViewController {
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var gameNumber: UILabel!
     @IBOutlet weak var gameRule: UILabel!
+    
+    let toonPath = Bundle.main.bundleURL.appendingPathComponent("yeah!.mp3")
+    
+    var toonPlayer = AVAudioPlayer()
     
     @IBAction func Return(_ sender: Any) {
         let instance = ViewController()
@@ -27,6 +32,15 @@ class RandomSecondController: UIViewController {
             if Int(randomGame.number!)! <= Number  {
                 k = 1
             }
+        }
+        
+        do {
+            toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
+            
+            toonPlayer.play()
+        }
+        catch{
+            print("ミストゥぅん")
         }
 
         gameName.text = randomGame.name
@@ -45,7 +59,7 @@ class RandomSecondController: UIViewController {
         let textNum: String = "人以上で遊んでね！"
         while k == 0 {
             randomGame = instance.createRandom()
-            if Int(randomGame.number!)! < Number  {
+            if Int(randomGame.number!)! <= Number  {
                 k = 1
             }
         }

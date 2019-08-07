@@ -29,7 +29,7 @@ class RandomSelectController: UIViewController {
             numberText = textNumber.text
             }
             else {
-                numberText = "1"
+                numberText = "1000"
             }
             let SecondVC: RandomSecondController = (segue.destination as? RandomSecondController)!
             SecondVC.Number = Int(numberText!)!
@@ -39,5 +39,9 @@ class RandomSelectController: UIViewController {
             let okayButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
             alert.addAction(okayButton)
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

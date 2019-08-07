@@ -50,11 +50,11 @@ class AddViewController: UIViewController {
         else{
             let title = "追加できませんでした"
             var message = ""
-            if(Int(textNumber.text!)! == 0){
-                message = "０人じゃ遊べないじゃん。。。"
-            }
-            else if textNumber.text == ""{
+            if textNumber.text == "" {
                 message = "人数を選択して下さい"
+            }
+            else if (Int(textNumber.text!)! == 0){
+                message = "０人じゃ遊べないじゃん。。。"
             }
             else{
                 message = "名前とルールの両方とも入力してください"
