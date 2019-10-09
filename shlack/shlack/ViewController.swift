@@ -17,9 +17,10 @@ import RealmSwift
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var table: UITableView!
-
+    
     var selectedName: String?
     var selectedRule: String?
+    var selectedNum: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         table.delegate = self
         table.dataSource = self
         
+        let tblBackColor: UIColor = UIColor.clear
+        table.backgroundColor = tblBackColor
+        //tableCell.backgroundColor = tblBackColor
         //realm  = try! Realm();
         //gamelist = realm!.objects(Games.self)
     }
@@ -40,6 +44,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //変数を作る
         let game : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "game", for: indexPath)
         //取得したgameからn番目を変数に代入
+        let grayClor = UIColor.white.withAlphaComponent(0.50)
+        game.backgroundColor = grayClor
         
         let item: Games = gamelist![(indexPath as NSIndexPath).row]
         //let item: Games = gamelist![indexPath.row]
@@ -54,6 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("\(indexPath.row)番目の行が選択されました。")
         selectedName = gamelist?[indexPath.row].name
         selectedRule = gamelist?[indexPath.row].rule
+        selectedNum = gamelist?[indexPath.row].number
         
         table.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
@@ -67,14 +74,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             // 11. SecondViewControllerのtextに選択した文字列を設定する
             secondVC.Name = selectedName
             secondVC.Rule = selectedRule
+            secondVC.Number = selectedNum
         }
     }
     
     func createRandom()-> Games {
         let n = gamelist?.count
-        print(gamelist)
         let rdm = Int.random(in: 0..<(n)!)
         return gamelist![rdm]
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            var gamelistArray = Array(gamelist!)
+            try! realm!.write {
+                realm!.delete(gamelistArray[indexPath.row])
+                gamelist = realm!.objects(Games.self)
+            }
+            gamelistArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
     }
 
 }

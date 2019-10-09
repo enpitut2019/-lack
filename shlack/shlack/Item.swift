@@ -16,7 +16,9 @@ class Games: Object {
     @objc dynamic var name: String? = nil
     //ルール
     @objc dynamic var rule: String? = nil
-    
+    //人数
+    @objc dynamic var number: String? = nil
+
     // データを保存。
     func save() {
         let realm = try! Realm()

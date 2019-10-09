@@ -12,9 +12,12 @@ import RealmSwift
 class SecondViewController: UIViewController {
     var Name: String?
     var Rule: String?
+    var Number: String?
+    var Numtext: String = "人以上で遊んでね"
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var label2: UITextView!
+    @IBOutlet weak var label3: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +28,9 @@ class SecondViewController: UIViewController {
         label.sizeToFit()
         self.view.addSubview(label)
         label.center = self.view.center*/
+        
         label.text = Name
         label2.text = Rule
+        label3.text = Number! + Numtext
     }
 }

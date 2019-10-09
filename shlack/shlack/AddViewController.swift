@@ -9,17 +9,20 @@ import UIKit
 import RealmSwift
 
 class AddViewController: UIViewController {
-
-    
     
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
+    @IBOutlet weak var textNumber: UITextField!
+    
     @IBAction func tapAddButton(_ sender: Any) {
-        if (textName.text != "" && textRule.text != ""){
+        if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
         let game = Games()
         game.name = textName.text
         
         game.rule = textRule.text
+        
+        game.number = textNumber.text
+
         game.save()
             
             let title = "追加できました"
@@ -46,7 +49,16 @@ class AddViewController: UIViewController {
         
         else{
             let title = "追加できませんでした"
-            let message = "名前とルールの両方とも入力してください"
+            var message = ""
+            if textNumber.text == "" {
+                message = "人数を選択して下さい"
+            }
+            else if (Int(textNumber.text!)! == 0){
+                message = "０人じゃ遊べないじゃん。。。"
+            }
+            else{
+                message = "名前とルールの両方とも入力してください"
+            }
             let okText = "OK"
             
             let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
@@ -57,5 +69,14 @@ class AddViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        self.textNumber.keyboardType = UIKeyboardType.numberPad
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
