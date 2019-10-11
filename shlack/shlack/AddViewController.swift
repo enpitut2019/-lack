@@ -13,6 +13,18 @@ class AddViewController: UIViewController {
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
     @IBOutlet weak var textNumber: UITextField!
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var labelRule: UILabel!
+    @IBOutlet weak var labelNumber: UILabel!
+    
+    let screenWidth = Int( UIScreen.main.bounds.size.width);
+    
+    //スクリーンの高さ
+    let screenHeight = Int(UIScreen.main.bounds.size.height);
+    
+    //CGRectで取得
+    let rect = UIScreen.main.bounds;
+    
     
     @IBAction func tapAddButton(_ sender: Any) {
         if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
@@ -70,6 +82,15 @@ class AddViewController: UIViewController {
     }
     override func viewDidLoad() {
         self.textNumber.keyboardType = UIKeyboardType.numberPad
+        
+        //self.labelName.frame = CGRect(x:screenWidth/96, y:screenHeight*2/19, width:screenWidth/2, height:screenHeight/32)
+        //self.labelName.font = labelName.font.withSize(CGFloat(screenWidth/16))
+        
+        //self.labelRule.frame = CGRect(x:screenWidth/96, y:screenHeight*5/19, width:screenWidth/2, height:screenHeight/32)
+        //self.labelNumber.frame = CGRect(x:screenWidth/96, y:screenHeight*9/19, width:screenWidth/2, height:screenHeight/32)
+        
+        // ステータスバーを非表示にする
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,5 +99,9 @@ class AddViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
