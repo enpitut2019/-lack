@@ -15,6 +15,7 @@ var gamelist: Results<Games>?
 var realm : Realm? = nil
 
 class HomeViewController: UIViewController {
+
     @IBOutlet weak var toRandom: UIButton!
     @IBOutlet weak var toRandom2: UIButton!
     @IBOutlet weak var all: UIButton!
@@ -29,7 +30,7 @@ class HomeViewController: UIViewController {
     let rect = UIScreen.main.bounds;
 
     
-    let toonPath = Bundle.main.bundleURL.appendingPathComponent("pudding.mp3")
+    let toonPath = Bundle.main.bundleURL.appendingPathComponent("はとぅーーん.m4a")
     
     var toonPlayer = AVAudioPlayer()
     
@@ -61,9 +62,10 @@ class HomeViewController: UIViewController {
         self.add.frame.size.height = CGFloat(screenHeight/9)
         self.add.titleLabel?.font = UIFont.systemFont(ofSize: self.toRandom.frame.size.height/3)
         
+        print(UIDevice.current.name)
         
         
-            do {
+           do {
                 toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
                 
                 toonPlayer.play()
@@ -71,6 +73,7 @@ class HomeViewController: UIViewController {
             catch{
                 print("ミストゥぅん")
             }
+        
         /*let sample = Games()
         try! realm?.write{
             sample.name = "サンプル"

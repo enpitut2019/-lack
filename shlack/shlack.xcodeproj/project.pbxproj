@@ -66,6 +66,7 @@
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 		980B065D22F7F11700029256 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		98566C3122F9014C00C16426 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
+		98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "はとぅーーん.m4a"; sourceTree = "<group>"; };
 		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
 		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
 		98E77E9D22FA524A0062958F /* toooon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toooon.mp3; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
 				4392282E22F3C79E00D14CBF /* Item.swift */,
+				98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */,
 				98F17040234D9462000DE468 /* yeah!.mp3 */,
 				98E77E9D22FA524A0062958F /* toooon.mp3 */,
 				7345166422FAAA7D00ECA791 /* pudding.mp3 */,
