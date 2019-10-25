@@ -30,9 +30,9 @@ class HomeViewController: UIViewController {
     let rect = UIScreen.main.bounds;
 
     
-    let toonPath = Bundle.main.bundleURL.appendingPathComponent("はとぅーーん.m4a")
+    /*let toonPath = Bundle.main.bundleURL.appendingPathComponent("はとぅーーん.m4a")
     
-    var toonPlayer = AVAudioPlayer()
+    var toonPlayer = AVAudioPlayer()*/
     
     override func viewDidLoad() {
         realm  = try! Realm();
@@ -65,14 +65,14 @@ class HomeViewController: UIViewController {
         print(UIDevice.current.name)
         
         
-           do {
+           /*do {
                 toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
                 
                 toonPlayer.play()
             }
             catch{
                 print("ミストゥぅん")
-            }
+            }*/
         
         /*let sample = Games()
         try! realm?.write{
