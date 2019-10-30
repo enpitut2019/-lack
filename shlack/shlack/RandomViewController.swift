@@ -16,9 +16,9 @@ class RandomViewController: UIViewController {
     @IBOutlet weak var gameNumber: UILabel!
     var Numtext: String = "人以上で遊んでね"
     
-    let toonPath = Bundle.main.bundleURL.appendingPathComponent("toooon.mp3")
+    /*let toonPath = Bundle.main.bundleURL.appendingPathComponent("toooon.mp3")
     
-    var toonPlayer = AVAudioPlayer()
+    var toonPlayer = AVAudioPlayer()*/
     
     @IBAction func Return(_ sender: Any) {
         let instance = ViewController()
@@ -28,14 +28,14 @@ class RandomViewController: UIViewController {
         gameNumber.text = randomGame.number! + Numtext
         //gameNumber.text = String(randomGame.number)
         
-        do {
+        /*do {
             toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
         
             toonPlayer.play()
             }
         catch{
             print("ミストゥぅん")
-        }
+        }*/
     }
     
     override func viewDidLoad() {

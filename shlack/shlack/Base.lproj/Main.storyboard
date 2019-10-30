@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="T95-vJ-A7m" customClass="HomeViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWH-pd-sgy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Xf-lM7">
@@ -32,7 +32,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qY6-ee-W9J" kind="show" id="zIj-kH-MiO"/>
+                                    <segue destination="qY6-ee-W9J" kind="presentation" modalPresentationStyle="fullScreen" id="zIj-kH-MiO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-65-hJh">
@@ -45,7 +45,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dvk-MC-7vc" kind="show" id="Bcr-6u-rvB"/>
+                                    <segue destination="Dvk-MC-7vc" kind="presentation" modalPresentationStyle="fullScreen" id="Bcr-6u-rvB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG2-H1-i2E">
@@ -57,7 +57,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="kzo-gN-izV"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="kzo-gN-izV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VoZ-u6-wC8">
@@ -69,7 +69,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CHb-tq-2Sr" kind="show" id="Evv-ae-fog"/>
+                                    <segue destination="CHb-tq-2Sr" kind="presentation" modalPresentationStyle="fullScreen" id="Evv-ae-fog"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,11 +99,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="Dvk-MC-7vc" customClass="RandomSelectController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ap8-R8-8Li">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="M1M-aR-oXw">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1268"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="M1M-aR-oXw" secondAttribute="height" multiplier="207:448" id="7mB-Ef-IjU"/>
                                 </constraints>
@@ -129,7 +129,7 @@
                                     <navigationItem title="ランダム検索(人数設定)" id="hBr-wI-Hba">
                                         <barButtonItem key="leftBarButtonItem" title="＜back" id="U6S-ag-ALF">
                                             <connections>
-                                                <segue destination="T95-vJ-A7m" kind="presentation" id="Q0v-3Y-BmN"/>
+                                                <segue destination="T95-vJ-A7m" kind="presentation" modalPresentationStyle="fullScreen" id="Q0v-3Y-BmN"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -141,7 +141,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="ランダム検索"/>
                                 <connections>
-                                    <segue destination="P7a-Ru-pdl" kind="show" identifier="showRandomView" id="atw-6o-9t0"/>
+                                    <segue destination="P7a-Ru-pdl" kind="presentation" identifier="showRandomView" modalPresentationStyle="fullScreen" id="atw-6o-9t0"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6V-Zu-jH1">
@@ -182,7 +182,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="P7a-Ru-pdl" customClass="RandomSecondController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g3o-UN-33A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="hfv-Bt-cea">
@@ -199,15 +199,15 @@
                                         <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" title="＜Back" id="FtI-Bq-J81">
                                             <connections>
-                                                <segue destination="Dvk-MC-7vc" kind="presentation" id="KRY-jZ-gIU"/>
+                                                <segue destination="Dvk-MC-7vc" kind="presentation" modalPresentationStyle="fullScreen" id="KRY-jZ-gIU"/>
                                             </connections>
                                         </barButtonItem>
                                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aLB-wJ-HA5">
-                                            <rect key="frame" x="105" y="13" width="165" height="30"/>
+                                            <rect key="frame" x="105" y="7" width="165" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="HOMEに戻る"/>
                                             <connections>
-                                                <segue destination="T95-vJ-A7m" kind="presentation" id="L4t-Lf-OsV"/>
+                                                <segue destination="T95-vJ-A7m" kind="presentation" modalPresentationStyle="fullScreen" id="L4t-Lf-OsV"/>
                                             </connections>
                                         </button>
                                     </navigationItem>
@@ -299,7 +299,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="qY6-ee-W9J" customClass="RandomViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jW1-Dq-4Vw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="1Vm-fT-nOI">
@@ -321,7 +321,7 @@
                                     <navigationItem id="fFI-M3-H3s">
                                         <barButtonItem key="leftBarButtonItem" title="＜Back" id="zEe-wU-bIu">
                                             <connections>
-                                                <segue destination="T95-vJ-A7m" kind="presentation" id="Qgw-63-r4z"/>
+                                                <segue destination="T95-vJ-A7m" kind="presentation" modalPresentationStyle="fullScreen" id="Qgw-63-r4z"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -407,7 +407,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="BYZ-38-t0r" customClass="ViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="FiQ-0u-pww">
@@ -450,7 +450,7 @@
                                     <navigationItem title="Title" id="Aec-Pe-egz">
                                         <barButtonItem key="leftBarButtonItem" title="＜Back" id="EoD-Kd-kAv">
                                             <connections>
-                                                <segue destination="T95-vJ-A7m" kind="show" id="7ev-oh-dOx"/>
+                                                <segue destination="T95-vJ-A7m" kind="presentation" modalPresentationStyle="fullScreen" id="7ev-oh-dOx"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -471,7 +471,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="8mg-6A-QyB" id="Vqy-Ad-0qc"/>
-                        <segue destination="hZj-I1-jgX" kind="show" identifier="showSecondView" id="OAk-qD-kKe"/>
+                        <segue destination="hZj-I1-jgX" kind="presentation" identifier="showSecondView" modalPresentationStyle="fullScreen" id="OAk-qD-kKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -483,7 +483,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="CHb-tq-2Sr" customClass="AddViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ft5-5L-y6l" customClass="AddViewController">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="yIu-a3-GjH">
@@ -565,7 +565,7 @@
                                     <navigationItem title="ゲーム追加" id="6gi-Qd-hLi">
                                         <barButtonItem key="leftBarButtonItem" title="＜" id="zW3-JY-SPx">
                                             <connections>
-                                                <segue destination="T95-vJ-A7m" kind="presentation" id="CZI-Gx-Pc6"/>
+                                                <segue destination="T95-vJ-A7m" kind="presentation" modalPresentationStyle="fullScreen" id="CZI-Gx-Pc6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -590,7 +590,7 @@
                         <outlet property="textName" destination="WYC-GH-t4S" id="vUC-Qt-bNk"/>
                         <outlet property="textNumber" destination="Mlf-nU-MMd" id="IlG-qc-eSh"/>
                         <outlet property="textRule" destination="NFz-4b-1ag" id="WN2-kL-QR0"/>
-                        <segue destination="T95-vJ-A7m" kind="show" identifier="AddSuccess" id="VRD-cb-Hga"/>
+                        <segue destination="T95-vJ-A7m" kind="presentation" identifier="AddSuccess" modalPresentationStyle="fullScreen" id="VRD-cb-Hga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKl-wk-165" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -602,7 +602,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" id="hZj-I1-jgX" customClass="SecondViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sWw-u9-4l2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="cp9-F6-99Y">
@@ -618,7 +618,7 @@
                                     <navigationItem title="詳細" id="VdG-Va-YuR">
                                         <barButtonItem key="leftBarButtonItem" title="＜Back" id="5ev-e0-Eg0">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="ouT-WO-Xzh"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="ouT-WO-Xzh"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -699,6 +699,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="ouT-WO-Xzh"/>
         <segue reference="Bcr-6u-rvB"/>
-        <segue reference="Q0v-3Y-BmN"/>
+        <segue reference="Qgw-63-r4z"/>
     </inferredMetricsTieBreakers>
 </document>
