@@ -48,7 +48,7 @@ class RandomViewController: UIViewController {
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.number! + Numtext
         
-        gameRule.font = UIFont(name: "PingFangHK-Ultralight", size: CGFloat(screenHeight*0.025))
+        gameRule.font = gameNumber.font
         // Do any additional setup after loading the view.
     }
 }
