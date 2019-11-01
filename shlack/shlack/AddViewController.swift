@@ -6,7 +6,8 @@
 //  Copyright © 2019 畑田将太. All rights reserved.
 //
 import UIKit
-import RealmSwift
+import Firebase
+import FirebaseDatabase
 
 class AddViewController: UIViewController {
     
@@ -25,17 +26,18 @@ class AddViewController: UIViewController {
     //CGRectで取得
     let rect = UIScreen.main.bounds;
     
+    var DBRef: DatabaseReference!
     
     @IBAction func tapAddButton(_ sender: Any) {
         if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
-        let game = Games()
-        game.name = textName.text
-        
-        game.rule = textRule.text
-        
-        game.number = textNumber.text
-
-        game.save()
+            let key = DBRef.child("posts").childByAutoId().key
+            let game = [
+                "name": textName.text,
+                "rule": textRule.text,
+                "player": textNumber.text
+                ]
+            let newGame = ["/games/\(String(describing: key))": game]
+            DBRef.updateChildValues(newGame)
             
             let title = "追加できました"
             let message = "HOMEに戻りますか？"
@@ -91,6 +93,8 @@ class AddViewController: UIViewController {
         
         self.labelNumber.frame = CGRect(x:screenWidth/96, y:screenHeight*12/19, width:screenWidth/2, height:screenHeight/32)
         self.labelNumber.font = labelNumber.font.withSize(CGFloat(screenWidth/16))
+        
+        DBRef = Database.database().reference()
         
         // ステータスバーを非表示にする
         self.setNeedsStatusBarAppearanceUpdate()

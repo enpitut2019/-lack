@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		432496DB23695ADC000E46CD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432496DA23695ADC000E46CD /* Item.swift */; };
+		432496DD23696D4A000E46CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432496DC23696D4A000E46CD /* GoogleService-Info.plist */; };
 		4392280122F3BFF600D14CBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392280022F3BFF600D14CBF /* AppDelegate.swift */; };
 		4392280322F3BFF600D14CBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392280222F3BFF600D14CBF /* ViewController.swift */; };
 		4392280622F3BFF600D14CBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4392280422F3BFF600D14CBF /* Main.storyboard */; };
@@ -14,7 +16,7 @@
 		4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */; };
 		4392281622F3BFF700D14CBF /* shlackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392281522F3BFF700D14CBF /* shlackTests.swift */; };
 		4392282122F3BFF700D14CBF /* shlackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282022F3BFF700D14CBF /* shlackUITests.swift */; };
-		4392282F22F3C79E00D14CBF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282E22F3C79E00D14CBF /* Item.swift */; };
+		43FADEB5236942440079B569 /* yeah!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 43FADEB4236942430079B569 /* yeah!.mp3 */; };
 		4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03949F22F7AF9100F9628D /* SecondViewController.swift */; };
 		7345166522FAAA7E00ECA791 /* pudding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7345166422FAAA7D00ECA791 /* pudding.mp3 */; };
 		980B065E22F7F11700029256 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B065D22F7F11700029256 /* AddViewController.swift */; };
@@ -22,7 +24,6 @@
 		98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9922F9440C0062958F /* RandomSelectController.swift */; };
 		98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9B22F948250062958F /* RandomSecondController.swift */; };
 		98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98E77E9D22FA524A0062958F /* toooon.mp3 */; };
-		98F17041234D9462000DE468 /* yeah!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98F17040234D9462000DE468 /* yeah!.mp3 */; };
 		98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F27A6122F7D46B0089DD24 /* HomeViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		0F80CB5703DEBE9E0F4130CC /* Pods-shlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.release.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.release.xcconfig"; sourceTree = "<group>"; };
+		432496DA23695ADC000E46CD /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		432496DC23696D4A000E46CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		439227FD22F3BFF600D14CBF /* shlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4392280022F3BFF600D14CBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4392280222F3BFF600D14CBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +62,7 @@
 		4392281C22F3BFF700D14CBF /* shlackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shlackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4392282022F3BFF700D14CBF /* shlackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shlackUITests.swift; sourceTree = "<group>"; };
 		4392282222F3BFF700D14CBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4392282E22F3C79E00D14CBF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		43FADEB4236942430079B569 /* yeah!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "yeah!.mp3"; sourceTree = "<group>"; };
 		4E03949F22F7AF9100F9628D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345166422FAAA7D00ECA791 /* pudding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pudding.mp3; sourceTree = "<group>"; };
@@ -70,7 +73,6 @@
 		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
 		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
 		98E77E9D22FA524A0062958F /* toooon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toooon.mp3; sourceTree = "<group>"; };
-		98F17040234D9462000DE468 /* yeah!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "yeah!.mp3"; path = "../../../../Downloads/yeah!.mp3"; sourceTree = "<group>"; };
 		98F27A6122F7D46B0089DD24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,15 +134,16 @@
 				980B065D22F7F11700029256 /* AddViewController.swift */,
 				98566C3122F9014C00C16426 /* RandomViewController.swift */,
 				98E77E9922F9440C0062958F /* RandomSelectController.swift */,
+				432496DA23695ADC000E46CD /* Item.swift */,
 				98E77E9B22F948250062958F /* RandomSecondController.swift */,
 				4392280422F3BFF600D14CBF /* Main.storyboard */,
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
-				4392282E22F3C79E00D14CBF /* Item.swift */,
 				98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */,
-				98F17040234D9462000DE468 /* yeah!.mp3 */,
+				43FADEB4236942430079B569 /* yeah!.mp3 */,
 				98E77E9D22FA524A0062958F /* toooon.mp3 */,
 				7345166422FAAA7D00ECA791 /* pudding.mp3 */,
+				432496DC23696D4A000E46CD /* GoogleService-Info.plist */,
 				4392280C22F3BFF700D14CBF /* Info.plist */,
 			);
 			path = shlack;
@@ -288,11 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7345166522FAAA7E00ECA791 /* pudding.mp3 in Resources */,
-				98F17041234D9462000DE468 /* yeah!.mp3 in Resources */,
+				43FADEB5236942440079B569 /* yeah!.mp3 in Resources */,
 				4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */,
 				4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */,
 				98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */,
 				4392280622F3BFF600D14CBF /* Main.storyboard in Resources */,
+				432496DD23696D4A000E46CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +364,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */,
+				432496DB23695ADC000E46CD /* Item.swift in Sources */,
 				98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */,
 				4392280322F3BFF600D14CBF /* ViewController.swift in Sources */,
 				98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */,
 				980B065E22F7F11700029256 /* AddViewController.swift in Sources */,
 				98566C3222F9014C00C16426 /* RandomViewController.swift in Sources */,
-				4392282F22F3C79E00D14CBF /* Item.swift in Sources */,
 				4392280122F3BFF600D14CBF /* AppDelegate.swift in Sources */,
 				4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */,
 			);
