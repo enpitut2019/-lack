@@ -16,8 +16,8 @@ var gamelist: Results<Games>?
 //Realmのインスタンスを初期化
 var realm : Realm? = nil
 
-var DBRef: DatabaseReference!
-DBRef = Database.database().reference()
+//var DBRef: DatabaseReference!
+//DBRef = Database.database().reference()
 
 class HomeViewController: UIViewController {
 

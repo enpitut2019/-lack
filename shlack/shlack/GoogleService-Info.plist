@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>523834600774-46let5tdo1eo47dgv8t4cp1i9p3remoe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.523834600774-46let5tdo1eo47dgv8t4cp1i9p3remoe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBD2fR38DxLBNomCpHxYV287w57anuVtM8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>523834600774</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>shota.shlack</string>
+	<key>PROJECT_ID</key>
+	<string>shlack-cffbb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>shlack-cffbb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:523834600774:ios:556cf8ae3a0ab319a94947</string>
+	<key>DATABASE_URL</key>
+	<string>https://shlack-cffbb.firebaseio.com</string>
+</dict>
+</plist>
