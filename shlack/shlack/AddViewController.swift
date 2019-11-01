@@ -83,14 +83,14 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         self.textNumber.keyboardType = UIKeyboardType.numberPad
         
-        self.labelName.frame = CGRect(x:screenWidth/96, y:screenHeight*4/19, width:screenWidth/2, height:screenHeight/32)
+        /*self.labelName.frame = CGRect(x:screenWidth/96, y:screenHeight*4/19, width:screenWidth/2, height:screenHeight/32)
         self.labelName.font = labelName.font.withSize(CGFloat(screenWidth/16))
         
         self.labelRule.frame = CGRect(x:screenWidth/96, y:screenHeight*7/19, width:screenWidth/2, height:screenHeight/32)
         self.labelRule.font = labelRule.font.withSize(CGFloat(screenWidth/16))
         
         self.labelNumber.frame = CGRect(x:screenWidth/96, y:screenHeight*12/19, width:screenWidth/2, height:screenHeight/32)
-        self.labelNumber.font = labelNumber.font.withSize(CGFloat(screenWidth/16))
+        self.labelNumber.font = labelNumber.font.withSize(CGFloat(screenWidth/16))*/
         
         // ステータスバーを非表示にする
         self.setNeedsStatusBarAppearanceUpdate()

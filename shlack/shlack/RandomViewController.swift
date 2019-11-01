@@ -12,7 +12,8 @@ import AVFoundation
 class RandomViewController: UIViewController {
     
     @IBOutlet weak var gameName: UILabel!
-    @IBOutlet weak var gameRule: UILabel!
+    @IBOutlet weak var gameRule: UITextView!
+    
     @IBOutlet weak var gameNumber: UILabel!
     var Numtext: String = "人以上で遊んでね"
     
@@ -42,9 +43,12 @@ class RandomViewController: UIViewController {
         super.viewDidLoad()
         let instance = ViewController()
         let randomGame: Games =  instance.createRandom()
+        let screenHeight = Double(UIScreen.main.bounds.size.height);
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.number! + Numtext
+        
+        gameRule.font = UIFont(name: "PingFangHK-Ultralight", size: CGFloat(screenHeight*0.025))
         // Do any additional setup after loading the view.
     }
 }
