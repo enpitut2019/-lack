@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Firebase
+import FirebaseDatabase
 
 //game名を格納する配列
 //var gamelist: Results<Games>?
@@ -55,6 +57,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //戻り値の設定（表示する中身)
         return game
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番目の行が選択されました。")

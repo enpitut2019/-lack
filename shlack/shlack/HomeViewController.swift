@@ -8,11 +8,16 @@
 import UIKit
 import RealmSwift
 import AVFoundation
+import Firebase
+import FirebaseDatabase
 
 //game名を格納する配列
 var gamelist: Results<Games>?
 //Realmのインスタンスを初期化
 var realm : Realm? = nil
+
+var DBRef: DatabaseReference!
+DBRef = Database.database().reference()
 
 class HomeViewController: UIViewController {
 
@@ -37,6 +42,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         realm  = try! Realm();
         gamelist = realm!.objects(Games.self)
+//        DBRef.child("games").observeEventType(DataEventType.Value, withBlock: { (snapshot) -> Void in
+//            for game in snapshot.children
+//            var gameClass = Games()
+//            gameClass.name = game.name
+//        })
         
         self.toRandom.frame.origin.x = CGFloat(screenWidth/10)
         self.toRandom.frame.origin.y = CGFloat(screenHeight*9/16)
