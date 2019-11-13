@@ -13,7 +13,6 @@ class RandomViewController: UIViewController {
     
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var gameRule: UITextView!
-    
     @IBOutlet weak var gameNumber: UILabel!
     var Numtext: String = "人以上で遊んでね"
     
@@ -43,8 +42,9 @@ class RandomViewController: UIViewController {
         super.viewDidLoad()
         let instance = ViewController()
         let randomGame: Games =  instance.createRandom()
-        let screenHeight = Double(UIScreen.main.bounds.size.height);
+        let screenWidth = Double(UIScreen.main.bounds.size.width);
         gameName.text = randomGame.name
+        gameName.font = gameName.font.withSize(CGFloat(screenWidth*0.1))
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.number! + Numtext
         
