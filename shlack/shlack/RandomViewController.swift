@@ -47,7 +47,7 @@ class RandomViewController: UIViewController {
         gameName.font = gameName.font.withSize(CGFloat(screenWidth*0.1))
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.number! + Numtext
-        
+        gameNumber.font = gameNumber.font.withSize(CGFloat(screenWidth*0.06))
         gameRule.font = gameNumber.font
         // Do any additional setup after loading the view.
     }
