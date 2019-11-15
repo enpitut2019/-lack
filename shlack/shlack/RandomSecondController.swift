@@ -29,7 +29,7 @@ class RandomSecondController: UIViewController {
         let textNum: String = "人以上で遊んでね！"
         while k == 0 {
             randomGame = instance.createRandom()
-            if Int(randomGame.number!)! <= Number  {
+            if Int(randomGame.player)! <= Number  {
                 k = 1
             }
         }
@@ -45,7 +45,7 @@ class RandomSecondController: UIViewController {
 
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        gameNumber.text = randomGame.number! + textNum
+        gameNumber.text = randomGame.player + textNum
         //gameNumber.text = String(randomGame.number)
     }
     
@@ -59,14 +59,14 @@ class RandomSecondController: UIViewController {
         let textNum: String = "人以上で遊んでね！"
         while k == 0 {
             randomGame = instance.createRandom()
-            if Int(randomGame.number!)! <= Number  {
+            if Int(randomGame.player)! <= Number  {
                 k = 1
             }
         }
         
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        gameNumber.text = randomGame.number! + textNum
+        gameNumber.text = randomGame.player + textNum
         //gameNumber.text = String(randomGame.number)
         // Do any additional setup after loading the view.
     }

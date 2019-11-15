@@ -26,20 +26,21 @@ class AddViewController: UIViewController {
     //CGRectで取得
     let rect = UIScreen.main.bounds;
     
-    var DBRef: DatabaseReference!
-    
     @IBAction func tapAddButton(_ sender: Any) {
         if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
-            let key = DBRef.child("posts").childByAutoId().key
+            let key = DBRef.child("games").childByAutoId().key
+//            let key = UUID().uuidString
             let game = [
+                "id": key,
                 "name": textName.text,
                 "rule": textRule.text,
                 "player": textNumber.text
                 ]
-            let newGame = ["/games/\(String(describing: key))": game]
+            let newGame = ["/games/\(key)/": game]
             DBRef.updateChildValues(newGame)
             
             let title = "追加できました"
+            
             let message = "HOMEに戻りますか？"
             let NoText = "NO"
             
@@ -95,6 +96,7 @@ class AddViewController: UIViewController {
         self.labelNumber.font = labelNumber.font.withSize(CGFloat(screenWidth/16))
         
         DBRef = Database.database().reference()
+                
         
         // ステータスバーを非表示にする
         self.setNeedsStatusBarAppearanceUpdate()

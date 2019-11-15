@@ -25,7 +25,7 @@ class RandomViewController: UIViewController {
         let randomGame: Games =  instance.createRandom()
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        gameNumber.text = randomGame.number! + Numtext
+        gameNumber.text = randomGame.player + Numtext
         //gameNumber.text = String(randomGame.number)
         
         /*do {
@@ -44,7 +44,7 @@ class RandomViewController: UIViewController {
         let randomGame: Games =  instance.createRandom()
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        gameNumber.text = randomGame.number! + Numtext
+        gameNumber.text = randomGame.player + Numtext
         // Do any additional setup after loading the view.
     }
 }

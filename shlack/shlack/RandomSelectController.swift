@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class RandomSelectController: UIViewController {
-    var RandomList: Results<Games>?
+    var RandomList = [Games]()
     
     @IBOutlet weak var textNumber: UITextField!
     
