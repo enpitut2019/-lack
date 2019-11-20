@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Xf-lM7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="3211"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bVi-Xf-lM7" secondAttribute="height" multiplier="207:421" id="Rfx-Yy-2wW"/>
                                 </constraints>
@@ -697,7 +697,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CJ9-bI-kXe">
                                 <rect key="frame" x="41.5" y="491" width="331" height="327"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -744,8 +744,8 @@
         <image name="UNADJUSTEDNONRAW_thumb_2" width="619" height="1268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ouT-WO-Xzh"/>
-        <segue reference="KRY-jZ-gIU"/>
-        <segue reference="L4t-Lf-OsV"/>
+        <segue reference="kzo-gN-izV"/>
+        <segue reference="Bcr-6u-rvB"/>
+        <segue reference="Qgw-63-r4z"/>
     </inferredMetricsTieBreakers>
 </document>
