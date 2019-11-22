@@ -10,6 +10,13 @@ import RealmSwift
 
 class AddViewController: UIViewController {
     
+    //オートレイアウト用に接続を追加　11/20
+
+    
+    @IBOutlet weak var Bar: UINavigationBar!
+    @IBOutlet weak var descriptName: UILabel!
+    @IBOutlet weak var descriptRule: UILabel!
+    @IBOutlet weak var descriptNumber: UILabel!
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textRule: UITextView!
     @IBOutlet weak var textNumber: UITextField!
@@ -80,9 +87,12 @@ class AddViewController: UIViewController {
             present(alert, animated: true, completion: nil)
         }
     }
+    
     override func viewDidLoad() {
         self.textNumber.keyboardType = UIKeyboardType.numberPad
         
+        self.descriptName.frame.origin.y = CGFloat(self.Bar.frame.origin.y + self.Bar.frame.size.height)
+        self.descriptName.frame.origin.x = CGFloat(screenWidth/30)
         /*self.labelName.frame = CGRect(x:screenWidth/96, y:screenHeight*4/19, width:screenWidth/2, height:screenHeight/32)
         self.labelName.font = labelName.font.withSize(CGFloat(screenWidth/16))
         
