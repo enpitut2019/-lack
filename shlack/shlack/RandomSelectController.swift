@@ -7,10 +7,11 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 
 class RandomSelectController: UIViewController {
-    var RandomList: Results<Games>?
+     var RandomList = [Games]()
+    //11/22マージの拭き残し　var RandomList: Results<Games>?
     
     @IBOutlet weak var textNumber: UITextField!
     
