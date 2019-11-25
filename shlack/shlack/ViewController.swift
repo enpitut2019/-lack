@@ -86,11 +86,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return true
     }
     
+    // テーブルからの削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            var gamelistArray = Array(gamelist)
-            DBRef.child("games/\(gamelistArray[indexPath.row].id)/").removeValue()
-            gamelistArray.remove(at: indexPath.row)
+            print(gamelist[indexPath.row].id)
+            DBRef.child("games").child("\(gamelist[indexPath.row].id)").removeValue()
+            gamelist.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
         }
     }

@@ -57,8 +57,9 @@ class HomeViewController: UIViewController {
         // DB接続の初期化
         DBRef = Database.database().reference()
         
-        // realtime databaseとの同期
-        DBRef.child("games").observeSingleEvent(of: .value, with: { (snapshot) in
+        // realtime databaseとの同期(無理やりだから要リファクタリング)
+        DBRef.child("games").observe(DataEventType.value, with: { (snapshot) in
+            gamelist.removeAll()
             for item in (snapshot.children) {
                 let child = item as! DataSnapshot
                 let dic = child.value as! NSDictionary
