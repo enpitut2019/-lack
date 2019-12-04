@@ -6,7 +6,7 @@
 //  Copyright © 2019 畑田将太. All rights reserved.
 //
 import UIKit
-import RealmSwift
+//import RealmSwift
 import AVFoundation
 
 class RandomSecondController: UIViewController {
@@ -16,9 +16,9 @@ class RandomSecondController: UIViewController {
     @IBOutlet weak var gameNumber: UILabel!
     @IBOutlet weak var gameRule: UILabel!
     
-    let toonPath = Bundle.main.bundleURL.appendingPathComponent("yeah!.mp3")
+    /*let toonPath = Bundle.main.bundleURL.appendingPathComponent("yeah!.mp3")
     
-    var toonPlayer = AVAudioPlayer()
+    var toonPlayer = AVAudioPlayer()*/
     
     @IBAction func Return(_ sender: Any) {
         let instance = ViewController()
@@ -29,23 +29,23 @@ class RandomSecondController: UIViewController {
         let textNum: String = "人以上で遊んでね！"
         while k == 0 {
             randomGame = instance.createRandom()
-            if Int(randomGame.number!)! <= Number  {
+            if Int(randomGame.player)! <= Number  {
                 k = 1
             }
         }
         
-        do {
+        /*do {
             toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
             
             toonPlayer.play()
         }
         catch{
             print("ミストゥぅん")
-        }
+        }*/
 
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        gameNumber.text = randomGame.number! + textNum
+        gameNumber.text = randomGame.player + textNum
         //gameNumber.text = String(randomGame.number)
     }
     
@@ -59,14 +59,14 @@ class RandomSecondController: UIViewController {
         let textNum: String = "人以上で遊んでね！"
         while k == 0 {
             randomGame = instance.createRandom()
-            if Int(randomGame.number!)! <= Number  {
+            if Int(randomGame.player)! <= Number  {
                 k = 1
             }
         }
         
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
-        gameNumber.text = randomGame.number! + textNum
+        gameNumber.text = randomGame.player + textNum
         //gameNumber.text = String(randomGame.number)
         // Do any additional setup after loading the view.
     }
