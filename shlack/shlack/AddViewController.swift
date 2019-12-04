@@ -91,16 +91,13 @@ class AddViewController: UIViewController {
     override func viewDidLoad() {
         self.textNumber.keyboardType = UIKeyboardType.numberPad
         
-        self.descriptName.frame.origin.y = CGFloat(self.Bar.frame.origin.y + self.Bar.frame.size.height)
-        self.descriptName.frame.origin.x = CGFloat(screenWidth/30)
-        /*self.labelName.frame = CGRect(x:screenWidth/96, y:screenHeight*4/19, width:screenWidth/2, height:screenHeight/32)
-        self.labelName.font = labelName.font.withSize(CGFloat(screenWidth/16))
+        self.descriptName.font = descriptName.font.withSize(CGFloat(screenWidth/20))
+        self.descriptName.frame = CGRect(x:screenWidth/30, y:Int(self.Bar.frame.origin.y + self.Bar.frame.size.height) + screenWidth/50, width:screenWidth*12/20, height:screenWidth/20)
         
-        self.labelRule.frame = CGRect(x:screenWidth/96, y:screenHeight*7/19, width:screenWidth/2, height:screenHeight/32)
-        self.labelRule.font = labelRule.font.withSize(CGFloat(screenWidth/16))
+        self.labelName.font = labelName.font.withSize(CGFloat(screenWidth/15))
+        self.labelName.frame = CGRect(x:screenWidth/30, y:Int(self.descriptName.frame.origin.y + self.descriptName.frame.size.height) + screenWidth/50, width:screenWidth*4/15, height:screenWidth/15)
         
-        self.labelNumber.frame = CGRect(x:screenWidth/96, y:screenHeight*12/19, width:screenWidth/2, height:screenHeight/32)
-        self.labelNumber.font = labelNumber.font.withSize(CGFloat(screenWidth/16))*/
+        self.textName.frame = CGRect(x:Int(self.labelName.frame.origin.x + self.labelName.frame.size.width), y:Int(self.descriptName.frame.origin.y + self.descriptName.frame.size.height) + screenWidth/50, width:screenWidth*4/15, height:screenWidth/15)
         
         // ステータスバーを非表示にする
         self.setNeedsStatusBarAppearanceUpdate()
