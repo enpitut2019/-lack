@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Firebase
+import FirebaseDatabase
 
 //game名を格納する配列
 //var gamelist: Results<Games>?
@@ -33,11 +35,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //tableCell.backgroundColor = tblBackColor
         //realm  = try! Realm();
         //gamelist = realm!.objects(Games.self)
+        
+        // DB接続の初期化
+        DBRef = Database.database().reference()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //戻り値の設定(表示するcell数)
-        return gamelist?.count ?? 0
+        return gamelist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let grayClor = UIColor.white.withAlphaComponent(0.50)
         game.backgroundColor = grayClor
         
-        let item: Games = gamelist![(indexPath as NSIndexPath).row]
+        let item: Games = gamelist[(indexPath as NSIndexPath).row]
         //let item: Games = gamelist![indexPath.row]
         
         //変数の中身を作る
@@ -58,9 +63,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row)番目の行が選択されました。")
-        selectedName = gamelist?[indexPath.row].name
-        selectedRule = gamelist?[indexPath.row].rule
-        selectedNum = gamelist?[indexPath.row].number
+        selectedName = gamelist[indexPath.row].name
+        selectedRule = gamelist[indexPath.row].rule
+        selectedNum = gamelist[indexPath.row].player
         
         table.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
@@ -79,9 +84,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func createRandom()-> Games {
-        let n = gamelist?.count
-        let rdm = Int.random(in: 0..<(n)!)
-        return gamelist![rdm]
+        let n = gamelist.count
+        let rdm = Int.random(in: 0..<(n))
+        return gamelist[rdm]
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -90,13 +95,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            var gamelistArray = Array(gamelist!)
-            try! realm!.write {
+            var gamelistArray = Array(gamelist)
+            DBRef.child("games/\(gamelistArray[indexPath.row].id)/").removeValue()
+            gamelistArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            /*11/22 マージの残像
+             try! realm!.write {
                 realm!.delete(gamelistArray[indexPath.row])
                 gamelist = realm!.objects(Games.self)
             }
             gamelistArray.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)*/
         }
     }
 

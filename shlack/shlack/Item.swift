@@ -5,7 +5,7 @@
 //  Created by 畑田将太 on 2019/08/02.
 //  Copyright © 2019 畑田将太. All rights reserved.
 //
-
+/* 11/22マージの食べ残し
 import Foundation
 import RealmSwift
 
@@ -49,4 +49,4 @@ class Games: Object {
     override static func primaryKey() -> String? {
         return "id"
     }
-}
+}*/
