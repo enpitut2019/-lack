@@ -6,7 +6,7 @@
 //  Copyright © 2019 畑田将太. All rights reserved.
 //
 import UIKit
-import RealmSwift
+//import RealmSwift
 import AVFoundation
 
 class RandomSecondController: UIViewController {
@@ -16,9 +16,9 @@ class RandomSecondController: UIViewController {
     @IBOutlet weak var gameNumber: UILabel!
     @IBOutlet weak var gameRule: UILabel!
     
-    let toonPath = Bundle.main.bundleURL.appendingPathComponent("yeah!.mp3")
+    /*let toonPath = Bundle.main.bundleURL.appendingPathComponent("yeah!.mp3")
     
-    var toonPlayer = AVAudioPlayer()
+    var toonPlayer = AVAudioPlayer()*/
     
     @IBAction func Return(_ sender: Any) {
         let instance = ViewController()
@@ -34,14 +34,14 @@ class RandomSecondController: UIViewController {
             }
         }
         
-        do {
+        /*do {
             toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
             
             toonPlayer.play()
         }
         catch{
             print("ミストゥぅん")
-        }
+        }*/
 
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule

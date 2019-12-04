@@ -35,7 +35,6 @@ var DBRef: DatabaseReference!
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var toRandom: UIButton!
     @IBOutlet weak var toRandom2: UIButton!
     @IBOutlet weak var all: UIButton!
     @IBOutlet weak var add: UIButton!
@@ -54,45 +53,37 @@ class HomeViewController: UIViewController {
     var toonPlayer = AVAudioPlayer()*/
     
     override func viewDidLoad() {
+        
         // DB接続の初期化
-        DBRef = Database.database().reference()
-        
-        // realtime databaseとの同期(無理やりだから要リファクタリング)
-        DBRef.child("games").observe(DataEventType.value, with: { (snapshot) in
-            gamelist.removeAll()
-            for item in (snapshot.children) {
-                let child = item as! DataSnapshot
-                let dic = child.value as! NSDictionary
-                gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
-            }
-        })
-        
-        
-        self.toRandom.frame.origin.x = CGFloat(screenWidth/10)
-        self.toRandom.frame.origin.y = CGFloat(screenHeight*9/16)
-        self.toRandom.frame.size.width = CGFloat(screenWidth*4/5)
-        self.toRandom.frame.size.height = CGFloat(screenHeight/9)
-        self.toRandom.titleLabel?.font = UIFont.systemFont(ofSize: self.toRandom.frame.size.height/3)
+               DBRef = Database.database().reference()
+               
+               // realtime databaseとの同期(無理やりだから要リファクタリング)
+               DBRef.child("games").observe(DataEventType.value, with: { (snapshot) in
+                   gamelist.removeAll()
+                   for item in (snapshot.children) {
+                       let child = item as! DataSnapshot
+                       let dic = child.value as! NSDictionary
+                       gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                   }
+               })
+
         
         self.toRandom2.frame.origin.x = CGFloat(screenWidth/10)
-        self.toRandom2.frame.origin.y = CGFloat(screenHeight*33/48)
+        self.toRandom2.frame.origin.y = CGFloat(screenHeight*3/5)
         self.toRandom2.frame.size.width = CGFloat(screenWidth*4/5)
-        self.toRandom2.frame.size.height = CGFloat(screenHeight/9)
-        self.toRandom2.titleLabel?.font = UIFont.systemFont(ofSize: self.toRandom.frame.size.height/3)
+        self.toRandom2.frame.size.height = CGFloat(screenHeight/7)
         
         self.all.frame.origin.x = CGFloat(screenWidth/10)
-        self.all.frame.origin.y = CGFloat(screenHeight*39/48)
+        self.all.frame.origin.y = CGFloat(screenHeight*27/35)
         self.all.frame.size.width = CGFloat(screenWidth*3/8)
         self.all.frame.size.height = CGFloat(screenHeight/9)
-        self.all.titleLabel?.font = UIFont.systemFont(ofSize: self.toRandom.frame.size.height/3)
         
         self.add.frame.origin.x = CGFloat(screenWidth/10 + screenWidth*4/5 - screenWidth*3/8)
-        self.add.frame.origin.y = CGFloat(screenHeight*39/48)
+        self.add.frame.origin.y = CGFloat(screenHeight*27/35)
         self.add.frame.size.width = CGFloat(screenWidth*3/8)
         self.add.frame.size.height = CGFloat(screenHeight/9)
-        self.add.titleLabel?.font = UIFont.systemFont(ofSize: self.toRandom.frame.size.height/3)
         
-        print(UIDevice.current.name)
+        //print(UIDevice.current.name)
         
         
            /*do {
@@ -104,12 +95,5 @@ class HomeViewController: UIViewController {
                 print("ミストゥぅん")
             }*/
         
-        /*let sample = Games()
-        try! realm?.write{
-            sample.name = "サンプル"
-            sample.rule = "ここにルールを打ち込みます"
-            sample.number = "0"
-            realm?.add(sample)
- }*/
     }
 }

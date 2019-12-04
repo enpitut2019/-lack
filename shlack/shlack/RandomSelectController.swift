@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 
 class RandomSelectController: UIViewController {
     var RandomList = [Games]()

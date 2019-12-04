@@ -27,7 +27,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
-
         // DB接続の初期化
         DBRef = Database.database().reference()
     }
@@ -45,7 +44,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         game.backgroundColor = grayClor
         
         let item: Games = gamelist[(indexPath as NSIndexPath).row]
-        //let item: Games = gamelist![indexPath.row]
         
         //変数の中身を作る
         game.textLabel!.text = item.name
@@ -89,7 +87,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // テーブルからの削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            print(gamelist[indexPath.row].id)
             DBRef.child("games").child("\(gamelist[indexPath.row].id)").removeValue()
             gamelist.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
