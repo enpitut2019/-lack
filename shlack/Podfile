@@ -9,5 +9,7 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'SwiftyJSON'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 # https://firebase.google.com/docs/ios/setup#available-pods
 end
