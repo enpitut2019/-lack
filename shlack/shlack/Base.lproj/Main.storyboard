@@ -11,47 +11,32 @@
         <!--Auth View Controller-->
         <scene sceneID="8CR-n1-QyL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cHz-dG-F9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="slu-Gh-o6b" customClass="AuthViewController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="slu-Gh-o6b" customClass="AuthViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="82e-8q-UUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH5-n1-jhV">
-                                <rect key="frame" x="169" y="788" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ログアウト"/>
-                                <connections>
-                                    <action selector="logoutButton:" destination="slu-Gh-o6b" eventType="touchUpInside" id="7j2-75-Pnv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AW-rD-xlk">
-                                <rect key="frame" x="103" y="616" width="208" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="さあ、ゲームの時間だ！"/>
-                                <connections>
-                                    <segue destination="T95-vJ-A7m" kind="presentation" modalPresentationStyle="fullScreen" id="7Ju-KY-aOF"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="RGK-LX-7LX"/>
                     </view>
                     <navigationItem key="navigationItem" id="e5I-SC-Xno"/>
+                    <connections>
+                        <segue destination="T95-vJ-A7m" kind="presentation" identifier="toHome" id="WHc-Mb-DlW"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHz-dG-F9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478.26086956521743" y="-911.38392857142856"/>
+            <point key="canvasLocation" x="455" y="-985"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="agn-WM-1ou">
             <objects>
-                <viewController modalTransitionStyle="crossDissolve" id="T95-vJ-A7m" customClass="HomeViewController" customModule="shlack" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="T95-vJ-A7m" customClass="HomeViewController" customModule="shlack" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWH-pd-sgy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Xf-lM7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="3211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bVi-Xf-lM7" secondAttribute="height" multiplier="207:421" id="Rfx-Yy-2wW"/>
                                 </constraints>
@@ -100,6 +85,15 @@
                                 <state key="normal" title="HELP"/>
                                 <connections>
                                     <segue destination="hhf-2z-O4M" kind="show" id="1YF-c8-2K5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYD-Ny-usL">
+                                <rect key="frame" x="0.0" y="51" width="77" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="T95-vJ-A7m" eventType="touchUpInside" id="AeM-Va-f6b"/>
+                                    <segue destination="slu-Gh-o6b" kind="presentation" id="lly-pw-O7Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -701,6 +695,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="kzo-gN-izV"/>
         <segue reference="Bcr-6u-rvB"/>
-        <segue reference="CFh-ir-zsV"/>
+        <segue reference="WHc-Mb-DlW"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -43,6 +43,18 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var all: UIButton!
     @IBOutlet weak var add: UIButton!
     
+    // ログアウトボタン
+    @IBAction func logoutButton(_ sender: Any) {
+        do {
+          try? Auth.auth().signOut()
+            print("てゅうん")
+            
+        } catch let _ as NSError {
+            print ("ちゅうえい")
+        }
+    }
+    
+    
     let screenWidth = Int( UIScreen.main.bounds.size.width);
     
     //スクリーンの高さ
@@ -64,8 +76,9 @@ class HomeViewController: UIViewController {
         // DB接続の初期化
                DBRef = Database.database().reference()
                
-               // realtime databaseとの同期
+               // realtime databaseとの同期(無理やりだから要リファクタリング)
                DBRef.child("games").observeSingleEvent(of: .value, with: { (snapshot) in
+                gamelist.removeAll()
                    for item in (snapshot.children) {
                        let child = item as! DataSnapshot
                        let dic = child.value as! NSDictionary

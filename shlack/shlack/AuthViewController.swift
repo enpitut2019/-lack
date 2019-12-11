@@ -19,14 +19,16 @@ class AuthViewController: UIViewController {
         self.view.addSubview(googleButton)
     }
     
-    @IBAction func logoutButton(_ sender: Any) {
-        do {
-          try? Auth.auth().signOut()
-            print("てゅうん")
-        } catch let _ as NSError {
-            print ("ちゅうえい")
-        }
-    }
+//    //ログアウトボタン
+//    @IBAction func logoutButton(_ sender: Any) {
+//        do {
+//          try? Auth.auth().signOut()
+//            print("てゅうん")
+//
+//        } catch let _ as NSError {
+//            print ("ちゅうえい")
+//        }
+//    }
 
     //Firebase Authenticationのサイレントログイン
     override func viewDidLoad() {
@@ -63,7 +65,7 @@ extension AuthViewController: GIDSignInDelegate, GIDSignInUIDelegate{
         //Firebase Baas側に認証(初回時はレコードを作成)
         Auth.auth().signIn(with: credential) { (authResult, error) in
         }
-
+        
         //ユーザ情報へのアクセス
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if let currentUser = auth.currentUser{
@@ -77,5 +79,17 @@ extension AuthViewController: GIDSignInDelegate, GIDSignInUIDelegate{
                 }
             }
         }
+        
+        
+        Auth.auth().signIn(with: credential) { (user, error) in
+                   if let error = error {
+                       print(error.localizedDescription)
+                       return
+                   }
+                   // User is signed in
+                   print("Sign in successfully")
+                   self.performSegue(withIdentifier: "toHome", sender: nil)
+               }
+
     }
 }
