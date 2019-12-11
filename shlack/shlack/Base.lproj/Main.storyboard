@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="slu-Gh-o6b">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T95-vJ-A7m">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4864" identifier="iOS"/>
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Xf-lM7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="3211"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bVi-Xf-lM7" secondAttribute="height" multiplier="207:421" id="Rfx-Yy-2wW"/>
                                 </constraints>
@@ -110,11 +110,12 @@
                         <outlet property="add" destination="VoZ-u6-wC8" id="wb3-GO-9OG"/>
                         <outlet property="all" destination="CG2-H1-i2E" id="bUH-WM-ULb"/>
                         <outlet property="toRandom2" destination="Vzh-65-hJh" id="y1l-xv-p1O"/>
+                        <segue destination="slu-Gh-o6b" kind="presentation" identifier="toLogin" modalPresentationStyle="fullScreen" id="yFD-kE-XBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g79-Se-U4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.71014492753625" y="-159.375"/>
+            <point key="canvasLocation" x="454" y="-159"/>
         </scene>
         <!--Help Controller-->
         <scene sceneID="QJZ-eu-4Gg">
@@ -696,5 +697,6 @@
         <segue reference="kzo-gN-izV"/>
         <segue reference="Bcr-6u-rvB"/>
         <segue reference="WHc-Mb-DlW"/>
+        <segue reference="yFD-kE-XBA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@ import Firebase
 import GoogleSignIn
 
 class AuthViewController: UIViewController {
+    
 
     //Googleログインボタンの設置
     func createGoogleSigninButton(){
@@ -44,7 +45,7 @@ class AuthViewController: UIViewController {
                  print(auth.currentUser?.displayName)
              }
          }
-        
+
 
      }
 

@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
           try? Auth.auth().signOut()
             print("てゅうん")
             
-        } catch let _ as NSError {
+        } catch _ as NSError {
             print ("ちゅうえい")
         }
     }
@@ -121,5 +121,11 @@ class HomeViewController: UIViewController {
             sample.number = "0"
             realm?.add(sample)
  }*/
+        
+        
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "toLogin", sender: nil)
+        }
+
     }
 }
