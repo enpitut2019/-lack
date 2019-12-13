@@ -10,49 +10,50 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
-class AuthViewController: UIViewController {
+class AuthViewController: UIViewController, GIDSignInUIDelegate {
     
 
-    //Googleログインボタンの設置
-    func createGoogleSigninButton(){
-        let googleButton = GIDSignInButton ()
-        googleButton.frame = CGRect(x: 20, y: self.view.frame.height/2-30, width: self.view.frame.width-40, height: 60)
-        self.view.addSubview(googleButton)
-    }
-    
-//    //ログアウトボタン
-//    @IBAction func logoutButton(_ sender: Any) {
-//        do {
-//          try? Auth.auth().signOut()
-//            print("てゅうん")
-//
-//        } catch let _ as NSError {
-//            print ("ちゅうえい")
-//        }
+//    //Googleログインボタンの設置
+//    func createGoogleSigninButton(){
+//        let googleButton = GIDSignInButton ()
+//        googleButton.frame = CGRect(x: 20, y: self.view.frame.height/2-30, width: self.view.frame.width-40, height: 60)
+//        self.view.addSubview(googleButton)
 //    }
-
+//
+    
+   
+    
     //Firebase Authenticationのサイレントログイン
+    //@IBOutlet weak var loginButton: GIDSignInButton!
     override func viewDidLoad() {
-         super.viewDidLoad()
+        
         GIDSignIn.sharedInstance()?.delegate = self as GIDSignInDelegate
         GIDSignIn.sharedInstance()?.uiDelegate = self as GIDSignInUIDelegate
 
-         Auth.auth().addStateDidChangeListener { (auth, user) in
-             if auth.currentUser == nil{
-                 self.createGoogleSigninButton()
-             }else{
-                 print(auth.currentUser?.uid)
-                 print(auth.currentUser?.displayName)
-             }
-         }
+//         Auth.auth().addStateDidChangeListener { (auth, user) in
+//             if auth.currentUser == nil{
+//                 self.createGoogleSigninButton()
+//             }else{
+//                 print(auth.currentUser?.uid)
+//                 print(auth.currentUser?.displayName)
+//             }
+//         }
 
 
      }
 
+    
+    @IBOutlet weak var inButton: GIDSignInButton!
+    
+    @IBAction func loginButtton(_ sender: Any) {
+        let signIn = GIDSignIn.sharedInstance()
+        signIn?.uiDelegate = self
+        signIn?.signIn()
+    }
 }
 
 //認証結果コールバックの記述
-extension AuthViewController: GIDSignInDelegate, GIDSignInUIDelegate{
+extension AuthViewController: GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)

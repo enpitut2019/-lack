@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T95-vJ-A7m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="slu-Gh-o6b">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="4864" identifier="iOS"/>
@@ -15,7 +15,34 @@
                     <view key="view" contentMode="scaleToFill" id="82e-8q-UUK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="W1S-xd-pvY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTn-Jv-luA" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="44" y="454" width="327" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="63"/>
+                                <state key="normal" title="ログイン" image="google.png">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtton:" destination="slu-Gh-o6b" eventType="touchUpInside" id="8PN-md-slZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="W1S-xd-pvY" firstAttribute="top" secondItem="82e-8q-UUK" secondAttribute="top" id="J0Q-J4-9ru"/>
+                            <constraint firstItem="W1S-xd-pvY" firstAttribute="leading" secondItem="RGK-LX-7LX" secondAttribute="leading" id="J6T-th-AtG"/>
+                            <constraint firstAttribute="bottom" secondItem="W1S-xd-pvY" secondAttribute="bottom" id="XLb-Po-NLc"/>
+                            <constraint firstItem="W1S-xd-pvY" firstAttribute="trailing" secondItem="RGK-LX-7LX" secondAttribute="trailing" id="dQW-RA-7ZE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RGK-LX-7LX"/>
                     </view>
                     <navigationItem key="navigationItem" id="e5I-SC-Xno"/>
@@ -25,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHz-dG-F9Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455" y="-985"/>
+            <point key="canvasLocation" x="453.62318840579712" y="-985.04464285714278"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="agn-WM-1ou">
@@ -36,7 +63,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-Xf-lM7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="3211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bVi-Xf-lM7" secondAttribute="height" multiplier="207:421" id="Rfx-Yy-2wW"/>
                                 </constraints>
@@ -93,7 +120,6 @@
                                 <state key="normal" title="ログアウト"/>
                                 <connections>
                                     <action selector="logoutButton:" destination="T95-vJ-A7m" eventType="touchUpInside" id="AeM-Va-f6b"/>
-                                    <segue destination="slu-Gh-o6b" kind="presentation" id="lly-pw-O7Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -115,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g79-Se-U4t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="454" y="-159"/>
+            <point key="canvasLocation" x="453.62318840579712" y="-159.375"/>
         </scene>
         <!--Help Controller-->
         <scene sceneID="QJZ-eu-4Gg">
@@ -692,11 +718,11 @@
         <image name="IMG_0020" width="1867" height="3211"/>
         <image name="UNADJUSTEDNONRAW_thumb_2" width="619" height="1268"/>
         <image name="description" width="1016" height="1218"/>
+        <image name="google.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="kzo-gN-izV"/>
         <segue reference="Bcr-6u-rvB"/>
         <segue reference="WHc-Mb-DlW"/>
-        <segue reference="yFD-kE-XBA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,7 @@ import RealmSwift
 import AVFoundation
 import Firebase
 import FirebaseDatabase
+import GoogleSignIn
 
 // ゲームデータ用構造体
 struct Games {
@@ -37,7 +38,7 @@ var gamelist: Results<Games>?
 //Realmのインスタンスを初期化
 var realm : Realm? = nil*/
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var toRandom2: UIButton!
     @IBOutlet weak var all: UIButton!
@@ -46,8 +47,9 @@ class HomeViewController: UIViewController {
     // ログアウトボタン
     @IBAction func logoutButton(_ sender: Any) {
         do {
-          try? Auth.auth().signOut()
-            print("てゅうん")
+          try Auth.auth().signOut()
+          self.performSegue(withIdentifier: "toLogin", sender: nil)
+          print("てゅうん")
             
         } catch _ as NSError {
             print ("ちゅうえい")
@@ -69,6 +71,10 @@ class HomeViewController: UIViewController {
     var toonPlayer = AVAudioPlayer()*/
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        if Auth.auth().currentUser == nil {
+            self.performSegue(withIdentifier: "toLogin", sender: nil)
+        }
         /*11/22マージの置き土産
          realm  = try! Realm();
         gamelist = realm!.objects(Games.self)*/
@@ -123,9 +129,7 @@ class HomeViewController: UIViewController {
  }*/
         
         
-        if Auth.auth().currentUser == nil {
-            self.performSegue(withIdentifier: "toLogin", sender: nil)
-        }
+        
 
     }
 }
