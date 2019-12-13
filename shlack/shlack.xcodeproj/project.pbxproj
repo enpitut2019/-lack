@@ -17,11 +17,12 @@
 		4392282F22F3C79E00D14CBF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4392282E22F3C79E00D14CBF /* Item.swift */; };
 		4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03949F22F7AF9100F9628D /* SecondViewController.swift */; };
 		7345166522FAAA7E00ECA791 /* pudding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7345166422FAAA7D00ECA791 /* pudding.mp3 */; };
+		737FFFB0239780D200A3A1F2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FFFAF239780D200A3A1F2 /* AuthViewController.swift */; };
 		980B065E22F7F11700029256 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B065D22F7F11700029256 /* AddViewController.swift */; };
+		98E4DF4623A0A5F000AE1A8D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98E4DF4523A0A5F000AE1A8D /* GoogleService-Info.plist */; };
 		98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9922F9440C0062958F /* RandomSelectController.swift */; };
 		98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9B22F948250062958F /* RandomSecondController.swift */; };
 		98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98E77E9D22FA524A0062958F /* toooon.mp3 */; };
-		98F17041234D9462000DE468 /* yeah!.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98F17040234D9462000DE468 /* yeah!.mp3 */; };
 		98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F27A6122F7D46B0089DD24 /* HomeViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
 /* End PBXBuildFile section */
@@ -62,13 +63,14 @@
 		4E03949F22F7AF9100F9628D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_shlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7345166422FAAA7D00ECA791 /* pudding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pudding.mp3; sourceTree = "<group>"; };
+		737FFFAF239780D200A3A1F2 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 		980B065D22F7F11700029256 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "はとぅーーん.m4a"; sourceTree = "<group>"; };
+		98E4DF4523A0A5F000AE1A8D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
 		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
 		98E77E9D22FA524A0062958F /* toooon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toooon.mp3; sourceTree = "<group>"; };
-		98F17040234D9462000DE468 /* yeah!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "yeah!.mp3"; path = "../../../../Downloads/yeah!.mp3"; sourceTree = "<group>"; };
 		98F27A6122F7D46B0089DD24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4392280022F3BFF600D14CBF /* AppDelegate.swift */,
+				737FFFAF239780D200A3A1F2 /* AuthViewController.swift */,
 				98F27A6122F7D46B0089DD24 /* HomeViewController.swift */,
 				4392280222F3BFF600D14CBF /* ViewController.swift */,
 				4E03949F22F7AF9100F9628D /* SecondViewController.swift */,
@@ -134,8 +137,8 @@
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
 				4392282E22F3C79E00D14CBF /* Item.swift */,
+				98E4DF4523A0A5F000AE1A8D /* GoogleService-Info.plist */,
 				98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */,
-				98F17040234D9462000DE468 /* yeah!.mp3 */,
 				98E77E9D22FA524A0062958F /* toooon.mp3 */,
 				7345166422FAAA7D00ECA791 /* pudding.mp3 */,
 				4392280C22F3BFF700D14CBF /* Info.plist */,
@@ -190,6 +193,7 @@
 				439227FA22F3BFF600D14CBF /* Frameworks */,
 				439227FB22F3BFF600D14CBF /* Resources */,
 				889A80930DA1D46F2A61B721 /* [CP] Embed Pods Frameworks */,
+				9136C1C6A69EAC82432D77B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,11 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7345166522FAAA7E00ECA791 /* pudding.mp3 in Resources */,
-				98F17041234D9462000DE468 /* yeah!.mp3 in Resources */,
 				4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */,
 				4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */,
 				98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */,
 				4392280622F3BFF600D14CBF /* Main.storyboard in Resources */,
+				98E4DF4623A0A5F000AE1A8D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +329,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-shlack/Pods-shlack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9136C1C6A69EAC82432D77B1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-shlack/Pods-shlack-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-shlack/Pods-shlack-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-shlack/Pods-shlack-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A3BF8B358FF6EEA3F4B61020 /* [CP] Check Pods Manifest.lock */ = {
@@ -363,6 +384,7 @@
 				980B065E22F7F11700029256 /* AddViewController.swift in Sources */,
 				4392282F22F3C79E00D14CBF /* Item.swift in Sources */,
 				4392280122F3BFF600D14CBF /* AppDelegate.swift in Sources */,
+				737FFFB0239780D200A3A1F2 /* AuthViewController.swift in Sources */,
 				4E0394A022F7AF9100F9628D /* SecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

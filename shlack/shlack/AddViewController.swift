@@ -6,7 +6,8 @@
 //  Copyright © 2019 畑田将太. All rights reserved.
 //
 import UIKit
-import RealmSwift
+import Firebase
+import FirebaseDatabase
 
 class AddViewController: UIViewController {
     
@@ -35,14 +36,26 @@ class AddViewController: UIViewController {
     
     @IBAction func tapAddButton(_ sender: Any) {
         if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
-        let game = Games()
+        /*11/22マージの影法師
+             let game = Games()
         game.name = textName.text
         
         game.rule = textRule.text
         
         game.number = textNumber.text
 
-        game.save()
+        game.save()*/
+            
+            let key = DBRef.child("games").childByAutoId().key
+            //            let key = UUID().uuidString
+                        let game = [
+                            "id": key,
+                            "name": textName.text,
+                            "rule": textRule.text,
+                            "player": textNumber.text
+                            ]
+                        let newGame = ["/games/\(key)/": game]
+                        DBRef.updateChildValues(newGame)
             
             let title = "追加できました"
             let message = "HOMEに戻りますか？"
