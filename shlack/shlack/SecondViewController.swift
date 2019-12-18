@@ -22,13 +22,6 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let label = UILabel()
-        label.text = textL
-        label.font = label.font.withSize(50)
-        label.sizeToFit()
-        self.view.addSubview(label)
-        label.center = self.view.center*/
-        
         label.text = Name
         label2.text = Rule
         label3.text = Number! + Numtext

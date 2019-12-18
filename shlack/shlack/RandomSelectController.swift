@@ -7,11 +7,9 @@
 //
 
 import UIKit
-//import RealmSwift
 
 class RandomSelectController: UIViewController {
      var RandomList = [Games]()
-    //11/22マージの拭き残し　var RandomList: Results<Games>?
     
     @IBOutlet weak var textNumber: UITextField!
     
@@ -19,9 +17,6 @@ class RandomSelectController: UIViewController {
     
     override func viewDidLoad() {
         self.textNumber.keyboardType = UIKeyboardType.numberPad
-       /* if numberText != "" {
-            RandomList = realm!.objects(Games.self).filter("number == $1", Int(numberText!)!)
-        }*/
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -33,11 +33,6 @@ var gamelist = [Games]()
 // realtime databaseとの接続設定
 var DBRef: DatabaseReference!
 
-/*/11/22マージの産物
-var gamelist: Results<Games>?
-//Realmのインスタンスを初期化
-var realm : Realm? = nil*/
-
 class HomeViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var toRandom2: UIButton!
@@ -56,24 +51,6 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
             print ("ちゅうえい")
         }
     }
-    
-    // ログインボタン
-//       @IBAction func loginButton(_ sender: Any) {
-//        do {
-//           let signIn = GIDSignIn.sharedInstance()
-//           signIn?.uiDelegate = self
-//           signIn?.signIn()
-//           print("OK!!")
-//         //  self.performSegue(withIdentifier: "toLogin", sender: nil)
-//
-//        } catch _ as NSError {
-//             print ("中じMAX")
-//               }
-//       }
-
-    
-   
-    
     
     let screenWidth = Int( UIScreen.main.bounds.size.width);
     
@@ -99,24 +76,10 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
             
         guard let authentication = user.authentication else { return }
         
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+        _ = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                               accessToken: authentication.accessToken)
-//    ログインしているときにページ遷移
-//            Auth.auth().signIn(with: credential) { (user, error) in
-//                if let error = error {
-//                    print(error.localizedDescription)
-//                    return
-//                }
-//                // User is signed in
-//                print("Sign in successfully")
-//                self.performSegue(withIdentifier: "toLogin", sender: nil)
-//            }
 
         }
-            
-        /*11/22マージの置き土産
-         realm  = try! Realm();
-        gamelist = realm!.objects(Games.self)*/
         
         // DB接続の初期化
                DBRef = Database.database().reference()

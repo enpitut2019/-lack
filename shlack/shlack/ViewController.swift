@@ -11,11 +11,6 @@ import RealmSwift
 import Firebase
 import FirebaseDatabase
 
-//game名を格納する配列
-//var gamelist: Results<Games>?
-//Realmのインスタンスを初期化
-//var realm : Realm? = nil
-
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var table: UITableView!
@@ -32,9 +27,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let tblBackColor: UIColor = UIColor.clear
         table.backgroundColor = tblBackColor
-        //tableCell.backgroundColor = tblBackColor
-        //realm  = try! Realm();
-        //gamelist = realm!.objects(Games.self)
         
         // DB接続の初期化
         DBRef = Database.database().reference()

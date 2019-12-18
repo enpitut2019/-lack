@@ -46,7 +46,6 @@ class RandomSecondController: UIViewController {
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.player + textNum
-        //gameNumber.text = String(randomGame.number)
     }
     
     override func viewDidLoad() {
@@ -67,7 +66,6 @@ class RandomSecondController: UIViewController {
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.player + textNum
-        //gameNumber.text = String(randomGame.number)
         // Do any additional setup after loading the view.
     }
 }
