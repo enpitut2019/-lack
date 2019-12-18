@@ -12,7 +12,6 @@ import FirebaseDatabase
 class AddViewController: UIViewController {
     
     //オートレイアウト用に接続を追加　11/20
-
     
     @IBOutlet weak var Bar: UINavigationBar!
     @IBOutlet weak var descriptName: UILabel!
@@ -33,31 +32,19 @@ class AddViewController: UIViewController {
     //CGRectで取得
     let rect = UIScreen.main.bounds;
     
-    
     @IBAction func tapAddButton(_ sender: Any) {
         if (textName.text != "" && textRule.text != "" && textNumber.text != "" && Int(textNumber.text!)! != 0){
-        /*11/22マージの影法師
-             let game = Games()
-        game.name = textName.text
-        
-        game.rule = textRule.text
-        
-        game.number = textNumber.text
-
-        game.save()*/
-            
-            let key = DBRef.child("games").childByAutoId().key
-            //            let key = UUID().uuidString
-                        let game = [
-                            "id": key,
-                            "name": textName.text,
-                            "rule": textRule.text,
-                            "player": textNumber.text
-                            ]
-                        let newGame = ["/games/\(key)/": game]
-                        DBRef.updateChildValues(newGame)
+            let key = DBRef.child("games").childByAutoId().key!
+            let game: [String: String?] = [
+                "id": key,
+                "name": textName.text,
+                "rule": textRule.text,
+                "player": textNumber.text
+                ]
+             DBRef.child("games").child("\(key)").updateChildValues(game as [AnyHashable : Any])
             
             let title = "追加できました"
+            
             let message = "HOMEに戻りますか？"
             let NoText = "NO"
             
@@ -114,6 +101,9 @@ class AddViewController: UIViewController {
         
         self.labelNumber.frame = CGRect(x:screenWidth/96, y:screenHeight*12/19, width:screenWidth/2, height:screenHeight/32)
         self.labelNumber.font = labelNumber.font.withSize(CGFloat(screenWidth/16))*/
+        
+        DBRef = Database.database().reference()
+                
         
         // ステータスバーを非表示にする
         self.setNeedsStatusBarAppearanceUpdate()
