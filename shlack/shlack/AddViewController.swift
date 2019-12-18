@@ -42,7 +42,7 @@ class AddViewController: UIViewController {
                 "rule": textRule.text,
                 "player": textNumber.text
                 ]
-            DBRef.child("games").child("\(String(describing: key))").updateChildValues(game as [AnyHashable : Any])
+             DBRef.child("games").child("\(key)").updateChildValues(game as [AnyHashable : Any])
             
             let title = "追加できました"
             
