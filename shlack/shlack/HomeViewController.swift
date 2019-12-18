@@ -48,13 +48,31 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
     @IBAction func logoutButton(_ sender: Any) {
         do {
           try Auth.auth().signOut()
-          self.performSegue(withIdentifier: "toLogin", sender: nil)
+          self.performSegue(withIdentifier: "toLogout", sender: nil)
           print("てゅうん")
-            
+
+
         } catch _ as NSError {
             print ("ちゅうえい")
         }
     }
+    
+    // ログインボタン
+//       @IBAction func loginButton(_ sender: Any) {
+//        do {
+//           let signIn = GIDSignIn.sharedInstance()
+//           signIn?.uiDelegate = self
+//           signIn?.signIn()
+//           print("OK!!")
+//         //  self.performSegue(withIdentifier: "toLogin", sender: nil)
+//
+//        } catch _ as NSError {
+//             print ("中じMAX")
+//               }
+//       }
+
+    
+   
     
     
     let screenWidth = Int( UIScreen.main.bounds.size.width);
@@ -72,9 +90,30 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if Auth.auth().currentUser == nil {
-            self.performSegue(withIdentifier: "toLogin", sender: nil)
+            
+        func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription)
+            return
         }
+            
+        guard let authentication = user.authentication else { return }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                              accessToken: authentication.accessToken)
+//    ログインしているときにページ遷移
+//            Auth.auth().signIn(with: credential) { (user, error) in
+//                if let error = error {
+//                    print(error.localizedDescription)
+//                    return
+//                }
+//                // User is signed in
+//                print("Sign in successfully")
+//                self.performSegue(withIdentifier: "toLogin", sender: nil)
+//            }
+
+        }
+            
         /*11/22マージの置き土産
          realm  = try! Realm();
         gamelist = realm!.objects(Games.self)*/
@@ -98,38 +137,18 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
         self.toRandom2.frame.size.width = CGFloat(screenWidth*4/5)
         self.toRandom2.frame.size.height = CGFloat(screenHeight/7)
         
-        self.all.frame.origin.x = CGFloat(screenWidth/10)
-        self.all.frame.origin.y = CGFloat(screenHeight*27/35)
-        self.all.frame.size.width = CGFloat(screenWidth*3/8)
-        self.all.frame.size.height = CGFloat(screenHeight/9)
+//        self.all.frame.origin.x = CGFloat(screenWidth/10)
+//        self.all.frame.origin.y = CGFloat(screenHeight*27/35)
+//        self.all.frame.size.width = CGFloat(screenWidth*3/8)
+//        self.all.frame.size.height = CGFloat(screenHeight/9)
         
-        self.add.frame.origin.x = CGFloat(screenWidth/10 + screenWidth*4/5 - screenWidth*3/8)
-        self.add.frame.origin.y = CGFloat(screenHeight*27/35)
-        self.add.frame.size.width = CGFloat(screenWidth*3/8)
-        self.add.frame.size.height = CGFloat(screenHeight/9)
-        
-        //print(UIDevice.current.name)
-        
-        
-           /*do {
-                toonPlayer = try AVAudioPlayer(contentsOf: toonPath, fileTypeHint: nil)
-                
-                toonPlayer.play()
-            }
-            catch{
-                print("ミストゥぅん")
-            }*/
-        
-        /*let sample = Games()
-        try! realm?.write{
-            sample.name = "サンプル"
-            sample.rule = "ここにルールを打ち込みます"
-            sample.number = "0"
-            realm?.add(sample)
- }*/
-        
-        
-        
+//        self.add.frame.origin.x = CGFloat(screenWidth/10 + screenWidth*4/5 - screenWidth*3/8)
+//        self.add.frame.origin.y = CGFloat(screenHeight*27/35)
+//        self.add.frame.size.width = CGFloat(screenWidth*3/8)
+//        self.add.frame.size.height = CGFloat(screenHeight/9)
 
     }
 }
+
+
+

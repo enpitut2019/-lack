@@ -90,7 +90,7 @@ extension AuthViewController: GIDSignInDelegate{
                    }
                    // User is signed in
                    print("Sign in successfully")
-                   self.performSegue(withIdentifier: "toHome", sender: nil)
+                   self.performSegue(withIdentifier: "toLogin", sender: nil)
                }
 
     }
