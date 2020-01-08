@@ -85,11 +85,12 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
                DBRef = Database.database().reference()
                
                // realtime databaseとの同期(無理やりだから要リファクタリング)
-               DBRef.child("games").observeSingleEvent(of: .value, with: { (snapshot) in
+        DBRef.child("games").child("\(String(describing: uid))").observeSingleEvent(of: .value, with: { (snapshot) in
                 gamelist.removeAll()
                    for item in (snapshot.children) {
-                       let child = item as! DataSnapshot
-                       let dic = child.value as! NSDictionary
+                    let uid = item as! DataSnapshot
+                    let gid = item as! DataSnapshot
+                    let dic = gid.value as! NSDictionary
                        gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
                    }
                })

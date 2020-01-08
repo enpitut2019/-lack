@@ -10,6 +10,11 @@ import UIKit
 import Firebase
 import GoogleSignIn
 
+var uid:String?
+var displayName:String?
+var email:String?
+var photoURL:URL?
+
 class AuthViewController: UIViewController, GIDSignInUIDelegate {
     
 
@@ -71,10 +76,16 @@ extension AuthViewController: GIDSignInDelegate{
         //ユーザ情報へのアクセス
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if let currentUser = auth.currentUser{
-                print(currentUser.uid)
-                print(currentUser.displayName)
-                print(currentUser.email)
-                print(currentUser.photoURL)
+                print(type(of: currentUser.uid))
+                uid = currentUser.uid
+                print(type(of: currentUser.displayName))
+                displayName = currentUser.displayName
+                print(type(of: currentUser.email))
+                email = currentUser.email
+                print(type(of: currentUser.photoURL))
+                photoURL = currentUser.photoURL
+                
+                
 
                 //アドレス確認メールの送信
                 Auth.auth().currentUser?.sendEmailVerification { (error) in
