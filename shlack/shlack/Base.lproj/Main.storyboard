@@ -699,20 +699,52 @@
             </objects>
             <point key="canvasLocation" x="-317.39130434782612" y="1316.5178571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--My Page View Controller-->
         <scene sceneID="C2t-H0-Ez6">
             <objects>
-                <viewController id="nXu-hA-vqu" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="nXu-hA-vqu" customClass="MyPageViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QR4-qb-G7t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="je6-GV-DCC">
+                                <rect key="frame" x="20" y="44" width="65" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ボタン"/>
+                                <connections>
+                                    <segue destination="gwC-tD-7Ju" kind="presentation" id="SJf-cD-eZ8"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="itL-py-fwp">
+                                <rect key="frame" x="20" y="131" width="374" height="712"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="game" id="KaU-ZG-n7d">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KaU-ZG-n7d" id="Jaa-6K-vjF">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nXu-hA-vqu" id="9df-PH-4oy"/>
+                                    <outlet property="delegate" destination="nXu-hA-vqu" id="pOE-fA-b5T"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tdo-mn-e0K"/>
                     </view>
+                    <connections>
+                        <outlet property="mytable" destination="itL-py-fwp" id="Urr-Wo-Smc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEV-Kz-dMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3081" y="-179"/>
+            <point key="canvasLocation" x="-3081.1594202898555" y="-179.46428571428569"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="9sg-jj-m1V">
@@ -722,6 +754,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="D2L-Jy-rTf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="D2L-Jy-rTf" secondAttribute="height" multiplier="207:421" id="Iye-ti-8NS"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjb-aD-5IO">
                                 <rect key="frame" x="76" y="593" width="263" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -780,13 +818,10 @@
                                 <rect key="frame" x="35" y="180" width="126" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="マイページだよん"/>
+                                <connections>
+                                    <segue destination="nXu-hA-vqu" kind="presentation" id="ayN-3Y-OIE"/>
+                                </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="D2L-Jy-rTf">
-                                <rect key="frame" x="-65" y="0.0" width="414" height="896"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="D2L-Jy-rTf" secondAttribute="height" multiplier="207:421" id="Iye-ti-8NS"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -816,6 +851,7 @@
         <image name="google.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="SJf-cD-eZ8"/>
         <segue reference="Ege-7c-ItD"/>
         <segue reference="F6R-JS-3j6"/>
         <segue reference="89m-DN-SKF"/>

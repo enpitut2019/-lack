@@ -1,9 +1,9 @@
 //
-//  ViewController.swift
+//  MyPageViewController.swift
 //  shlack
 //
-//  Created by 畑田将太 on 2019/08/02.
-//  Copyright © 2019 畑田将太. All rights reserved.
+//  Created by 丸田 on 2020/01/08.
+//  Copyright © 2020 畑田将太. All rights reserved.
 //
 
 import UIKit
@@ -11,9 +11,10 @@ import RealmSwift
 import Firebase
 import FirebaseDatabase
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MyPageViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var table: UITableView!
+
+    @IBOutlet weak var mytable: UITableView!
     
     
     var selectedName: String?
@@ -23,14 +24,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        table.delegate = self
-        table.dataSource = self
+        mytable.delegate = self
+        mytable.dataSource = self
         
         let tblBackColor: UIColor = UIColor.clear
-        table.backgroundColor = tblBackColor
+        mytable.backgroundColor = tblBackColor
         
         // DB接続の初期化
         DBRef = Database.database().reference()
+        
+        DBRef.child("games").child("\(String(describing: uid))").observeSingleEvent(of: .value, with: { (snapshot) in
+                   for item in (snapshot.children) {
+                    let gid = item as! DataSnapshot
+                    let dic = gid.value as! NSDictionary
+                       gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                   }
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,7 +69,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         selectedRule = gamelist[indexPath.row].rule
         selectedNum = gamelist[indexPath.row].player
         
-        table.deselectRow(at: indexPath, animated: true)
+        mytable.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
         performSegue(withIdentifier: "showSecondView", sender: nil)
     }
@@ -96,4 +105,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
 }
-
