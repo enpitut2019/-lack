@@ -84,13 +84,30 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
         // DB接続の初期化
                DBRef = Database.database().reference()
         
-//        DBRef.child("games").child("\(String(describing: uid))").observeSingleEvent(of: .value, with: { (snapshot) in
-//                   for item in (snapshot.children) {
-//                    let gid = item as! DataSnapshot
-//                    let dic = gid.value as! NSDictionary
-//                       gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
-//                   }
-//               })
+        // realtime databaseとの同期(無理やりだから要リファクタリング) MyTable
+        DBRef.child("games").observeSingleEvent(of: .value, with: { (snapshot) in
+            gamelist.removeAll()
+            for user in (snapshot.children) {
+                let uid = user as! DataSnapshot
+                for game in (uid.children){
+                    let gid = game as! DataSnapshot
+                    let dic = gid.value as! NSDictionary
+                        gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                    }
+                }
+            }
+        )
+        
+        if let newuid = uid {
+        DBRef.child("games").child(newuid).observeSingleEvent(of: .value, with: { (snapshot) in
+             mygamelist.removeAll()
+                   for item in (snapshot.children) {
+                    let gid = item as! DataSnapshot
+                    let dic = gid.value as! NSDictionary
+                       mygamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                   }
+        })
+        }
 
         
         self.toRandom2.frame.origin.x = CGFloat(screenWidth/10)

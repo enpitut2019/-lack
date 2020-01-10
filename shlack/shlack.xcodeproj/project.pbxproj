@@ -19,12 +19,12 @@
 		737FFFB0239780D200A3A1F2 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FFFAF239780D200A3A1F2 /* AuthViewController.swift */; };
 		73A185FA23C5A2F10029144C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A185F923C5A2F10029144C /* MyPageViewController.swift */; };
 		980B065E22F7F11700029256 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B065D22F7F11700029256 /* AddViewController.swift */; };
+		984E908823C8601400CB54A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 984E908723C8601400CB54A8 /* GoogleService-Info.plist */; };
 		98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9922F9440C0062958F /* RandomSelectController.swift */; };
 		98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9B22F948250062958F /* RandomSecondController.swift */; };
 		98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98E77E9D22FA524A0062958F /* toooon.mp3 */; };
 		98F27A6222F7D46B0089DD24 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F27A6122F7D46B0089DD24 /* HomeViewController.swift */; };
 		9B51A16A471D7CF0AE8DC894 /* Pods_shlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 691ED48C7C402D2A14D47BF2 /* Pods_shlack.framework */; };
-		F25AFBFA2387C6F700D1FBAA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F25AFBF92387C6F700D1FBAA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +66,12 @@
 		73A185F923C5A2F10029144C /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 		980B065D22F7F11700029256 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		984E908723C8601400CB54A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "はとぅーーん.m4a"; sourceTree = "<group>"; };
 		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
 		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
 		98E77E9D22FA524A0062958F /* toooon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = toooon.mp3; sourceTree = "<group>"; };
 		98F27A6122F7D46B0089DD24 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F25AFBF92387C6F700D1FBAA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 				4392280422F3BFF600D14CBF /* Main.storyboard */,
 				4392280722F3BFF700D14CBF /* Assets.xcassets */,
 				4392280922F3BFF700D14CBF /* LaunchScreen.storyboard */,
-				F25AFBF92387C6F700D1FBAA /* GoogleService-Info.plist */,
+				984E908723C8601400CB54A8 /* GoogleService-Info.plist */,
 				98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */,
 				98E77E9D22FA524A0062958F /* toooon.mp3 */,
 				7345166422FAAA7D00ECA791 /* pudding.mp3 */,
@@ -293,7 +293,7 @@
 				4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */,
 				98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */,
 				4392280622F3BFF600D14CBF /* Main.storyboard in Resources */,
-				F25AFBFA2387C6F700D1FBAA /* GoogleService-Info.plist in Resources */,
+				984E908823C8601400CB54A8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
