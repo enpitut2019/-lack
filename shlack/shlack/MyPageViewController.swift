@@ -59,6 +59,7 @@ class MyPageViewController: UIViewController, UITableViewDataSource, UITableView
         
         //変数の中身を作る
         game.textLabel!.text = item.name
+        
         //戻り値の設定（表示する中身)
         return game
     }
