@@ -37,9 +37,15 @@ var DBRef: DatabaseReference!
 
 class HomeViewController: UIViewController, GIDSignInUIDelegate {
 
+    var audioPlayerInstance : AVAudioPlayer! = nil
+    
     @IBOutlet weak var toRandom2: UIButton!
     @IBOutlet weak var all: UIButton!
     @IBOutlet weak var add: UIButton!
+    @IBAction func giant(_ sender: Any) {
+        audioPlayerInstance.currentTime = 0         // 再生箇所を頭に移す
+        audioPlayerInstance.play()
+    }
     
     // ログアウトボタン
     @IBAction func logoutButton(_ sender: Any) {
@@ -69,6 +75,20 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*コールモード*/
+        let soundFilePath = Bundle.main.path(forResource: "giant", ofType: "mp3")
+        if let soundFilePatha = soundFilePath {
+            let sound:URL = URL(fileURLWithPath: soundFilePatha)
+            do {
+                audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+            } catch {
+                print("AVAudioPlayerインスタンス作成でエラー")
+            }
+            // 再生準備
+            audioPlayerInstance.prepareToPlay()
+        }
+            /*コールモード*/
             
         func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -129,6 +149,3 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
 
     }
 }
-
-
-

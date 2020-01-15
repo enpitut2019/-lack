@@ -13,11 +13,13 @@ class SecondViewController: UIViewController {
     var Name: String?
     var Rule: String?
     var Number: String?
+    var Maker: String?
     var Numtext: String = "人以上で遊んでね"
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var label2: UITextView!
     @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label_maker: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +27,6 @@ class SecondViewController: UIViewController {
         label.text = Name
         label2.text = Rule
         label3.text = Number! + Numtext
+        label_maker.text = Maker
     }
 }

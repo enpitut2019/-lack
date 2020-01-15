@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var selectedName: String?
     var selectedRule: String?
     var selectedNum: String?
+    var selectedMaker: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         selectedName = gamelist[indexPath.row].name
         selectedRule = gamelist[indexPath.row].rule
         selectedNum = gamelist[indexPath.row].player
+        selectedMaker = gamelist[indexPath.row].maker
         
         table.deselectRow(at: indexPath, animated: true)
         // 別の画面に遷移
@@ -87,6 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             secondVC.Name = selectedName
             secondVC.Rule = selectedRule
             secondVC.Number = selectedNum
+            secondVC.Maker = selectedMaker
         }
     }
     
