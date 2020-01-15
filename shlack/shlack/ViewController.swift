@@ -40,7 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 for game in (uid.children){
                     let gid = game as! DataSnapshot
                     let dic = gid.value as! NSDictionary
-                        gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                        gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String, maker: dic["maker"] as! String))
                     }
                 }
             }

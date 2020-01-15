@@ -40,6 +40,7 @@ class AddViewController: UIViewController {
                 "name": textName.text,
                 "rule": textRule.text,
                 "player": textNumber.text,
+                "maker": displayName
                 ]
             DBRef.child("games").child(uid!).child("\(key)").updateChildValues(game as [AnyHashable : Any])
             

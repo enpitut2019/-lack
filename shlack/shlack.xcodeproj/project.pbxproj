@@ -20,6 +20,7 @@
 		73A185FA23C5A2F10029144C /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A185F923C5A2F10029144C /* MyPageViewController.swift */; };
 		980B065E22F7F11700029256 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B065D22F7F11700029256 /* AddViewController.swift */; };
 		984E908823C8601400CB54A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 984E908723C8601400CB54A8 /* GoogleService-Info.plist */; };
+		984E908C23CEC8DE00CB54A8 /* drink_cole.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 984E908B23CEC8DE00CB54A8 /* drink_cole.mp3 */; };
 		98E77E9A22F9440C0062958F /* RandomSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9922F9440C0062958F /* RandomSelectController.swift */; };
 		98E77E9C22F948250062958F /* RandomSecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E77E9B22F948250062958F /* RandomSecondController.swift */; };
 		98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 98E77E9D22FA524A0062958F /* toooon.mp3 */; };
@@ -67,6 +68,7 @@
 		8097AE4212BAAD790D6F7F3B /* Pods-shlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shlack.debug.xcconfig"; path = "Target Support Files/Pods-shlack/Pods-shlack.debug.xcconfig"; sourceTree = "<group>"; };
 		980B065D22F7F11700029256 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		984E908723C8601400CB54A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		984E908B23CEC8DE00CB54A8 /* drink_cole.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drink_cole.mp3; sourceTree = "<group>"; };
 		98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "はとぅーーん.m4a"; sourceTree = "<group>"; };
 		98E77E9922F9440C0062958F /* RandomSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelectController.swift; sourceTree = "<group>"; };
 		98E77E9B22F948250062958F /* RandomSecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSecondController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				98948CD32356D3F00066E8B4 /* はとぅーーん.m4a */,
 				98E77E9D22FA524A0062958F /* toooon.mp3 */,
 				7345166422FAAA7D00ECA791 /* pudding.mp3 */,
+				984E908B23CEC8DE00CB54A8 /* drink_cole.mp3 */,
 				4392280C22F3BFF700D14CBF /* Info.plist */,
 			);
 			path = shlack;
@@ -292,6 +295,7 @@
 				4392280B22F3BFF700D14CBF /* LaunchScreen.storyboard in Resources */,
 				4392280822F3BFF700D14CBF /* Assets.xcassets in Resources */,
 				98E77E9E22FA524A0062958F /* toooon.mp3 in Resources */,
+				984E908C23CEC8DE00CB54A8 /* drink_cole.mp3 in Resources */,
 				4392280622F3BFF600D14CBF /* Main.storyboard in Resources */,
 				984E908823C8601400CB54A8 /* GoogleService-Info.plist in Resources */,
 			);

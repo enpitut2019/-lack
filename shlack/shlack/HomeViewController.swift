@@ -18,12 +18,14 @@ struct Games {
     var name: String
     var rule: String
     var player: String
+    var maker: String
     
-    init(id: String, name: String, rule: String, player: String){
+    init(id: String, name: String, rule: String, player: String, maker:String){
         self.id = id
         self.name = name
         self.rule = rule
         self.player = player
+        self.maker = maker
     }
 }
 
@@ -92,7 +94,7 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
                 for game in (uid.children){
                     let gid = game as! DataSnapshot
                     let dic = gid.value as! NSDictionary
-                        gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                        gamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String, maker: dic["maker"] as! String))
                     }
                 }
             }
@@ -104,7 +106,7 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
                    for item in (snapshot.children) {
                     let gid = item as! DataSnapshot
                     let dic = gid.value as! NSDictionary
-                       mygamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String))
+                       mygamelist.append(Games(id: dic["id"] as! String, name: dic["name"] as! String, rule: dic["rule"] as! String, player: dic["player"] as! String, maker: dic["maker"] as! String))
                    }
         })
         }
