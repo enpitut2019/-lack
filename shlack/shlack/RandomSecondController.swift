@@ -84,7 +84,7 @@ class RandomSecondController: UIViewController {
         gameName.text = randomGame.name
         gameRule.text = randomGame.rule
         gameNumber.text = randomGame.player + textNum
-        
+        maker.text = randomGame.maker
         // Do any additional setup after loading the view.
     }
     
@@ -95,7 +95,8 @@ class RandomSecondController: UIViewController {
     
     
     @IBAction func call(_ sender: UIButton) {
-        
+        audioPlayerInstance.currentTime = 0         // 再生箇所を頭に移す
+        audioPlayerInstance.play() 
     }
     
 }

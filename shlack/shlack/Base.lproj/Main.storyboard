@@ -601,7 +601,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="itL-py-fwp">
-                                <rect key="frame" x="20" y="131" width="374" height="712"/>
+                                <rect key="frame" x="20" y="180" width="374" height="663"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -637,6 +637,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="きみの作ったゲームぜよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8N-QL-hY5">
+                                <rect key="frame" x="22" y="108" width="371" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tdo-mn-e0K"/>
@@ -1420,15 +1427,15 @@
         <image name="google.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KcH-Pg-p7F"/>
+        <segue reference="V9z-4N-Lw6"/>
         <segue reference="JKy-Dh-0XT"/>
         <segue reference="Cgc-P3-GJR"/>
         <segue reference="jrp-Dh-y20"/>
-        <segue reference="LNL-gA-48w"/>
+        <segue reference="SJf-cD-eZ8"/>
         <segue reference="zqC-h8-0hC"/>
-        <segue reference="ouT-WO-Xzh"/>
-        <segue reference="b76-jY-P7o"/>
+        <segue reference="kzo-gN-izV"/>
+        <segue reference="Bcr-6u-rvB"/>
         <segue reference="1YF-c8-2K5"/>
-        <segue reference="uKb-vD-Yrz"/>
+        <segue reference="7ev-oh-dOx"/>
     </inferredMetricsTieBreakers>
 </document>
