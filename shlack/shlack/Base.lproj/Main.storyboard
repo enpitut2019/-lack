@@ -329,7 +329,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="FiQ-0u-pww">
-                                <rect key="frame" x="0.0" y="0.0" width="415" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FiQ-0u-pww" secondAttribute="height" multiplier="207:448" id="Qrh-nJ-BJh"/>
                                 </constraints>
@@ -362,7 +362,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcx-8N-FLx">
-                                <rect key="frame" x="0.0" y="44" width="415" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="げーむりすと" id="Aec-Pe-egz">
                                         <barButtonItem key="leftBarButtonItem" title="＜Back" id="EoD-Kd-kAv">
@@ -545,6 +545,7 @@
         <!--My Page View Controller-->
         <scene sceneID="C2t-H0-Ez6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EEV-Kz-dMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="nXu-hA-vqu" customClass="MyPageViewController" customModule="shlack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QR4-qb-G7t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -552,7 +553,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" id="vdI-25-Nj4">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="itL-py-fwp">
                                 <rect key="frame" x="20" y="180" width="374" height="663"/>
@@ -590,8 +591,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="きみの作ったゲームぜよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8N-QL-hY5">
-                                <rect key="frame" x="22" y="108" width="371" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="きみの作ったゲームぜよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8N-QL-hY5">
+                                <rect key="frame" x="22" y="108" width="370" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="AGp-cs-6TF"/>
                                 </constraints>
@@ -602,14 +603,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="PON-n4-ntP" firstAttribute="trailing" secondItem="vdI-25-Nj4" secondAttribute="trailing" id="IHa-0D-2RN"/>
+                            <constraint firstItem="PON-n4-ntP" firstAttribute="trailing" secondItem="tdo-mn-e0K" secondAttribute="trailing" id="IHa-0D-2RN"/>
                             <constraint firstItem="tdo-mn-e0K" firstAttribute="bottom" secondItem="itL-py-fwp" secondAttribute="bottom" constant="19" id="JFU-gT-zXs"/>
-                            <constraint firstItem="PON-n4-ntP" firstAttribute="leading" secondItem="vdI-25-Nj4" secondAttribute="leading" id="Jf7-Dm-Xat"/>
+                            <constraint firstItem="PON-n4-ntP" firstAttribute="leading" secondItem="tdo-mn-e0K" secondAttribute="leading" id="Jf7-Dm-Xat"/>
+                            <constraint firstItem="vdI-25-Nj4" firstAttribute="trailing" secondItem="tdo-mn-e0K" secondAttribute="trailing" id="Nd6-Xh-60b"/>
                             <constraint firstItem="PON-n4-ntP" firstAttribute="top" secondItem="tdo-mn-e0K" secondAttribute="top" id="Plb-HW-Gy4"/>
                             <constraint firstItem="itL-py-fwp" firstAttribute="top" secondItem="g8N-QL-hY5" secondAttribute="bottom" constant="17" id="SER-oa-eGE"/>
+                            <constraint firstItem="vdI-25-Nj4" firstAttribute="top" secondItem="tdo-mn-e0K" secondAttribute="top" constant="-44" id="XxV-KT-hqO"/>
                             <constraint firstItem="g8N-QL-hY5" firstAttribute="centerX" secondItem="itL-py-fwp" secondAttribute="centerX" id="Zmk-wv-qLS"/>
                             <constraint firstItem="itL-py-fwp" firstAttribute="leading" secondItem="QR4-qb-G7t" secondAttribute="leadingMargin" id="bLM-26-vb3"/>
                             <constraint firstItem="g8N-QL-hY5" firstAttribute="leading" secondItem="tdo-mn-e0K" secondAttribute="leading" constant="22" id="gKd-9w-Nhj"/>
+                            <constraint firstItem="vdI-25-Nj4" firstAttribute="leading" secondItem="tdo-mn-e0K" secondAttribute="leading" id="hJK-gJ-g53"/>
                             <constraint firstItem="g8N-QL-hY5" firstAttribute="top" secondItem="PON-n4-ntP" secondAttribute="bottom" constant="20" id="yBJ-Ux-fUG"/>
                             <constraint firstItem="PON-n4-ntP" firstAttribute="centerX" secondItem="g8N-QL-hY5" secondAttribute="centerX" id="zs6-Fw-oJS"/>
                         </constraints>
@@ -620,7 +624,6 @@
                         <segue destination="clc-NM-GGG" kind="presentation" identifier="showSecondView" modalPresentationStyle="fullScreen" id="lio-e8-enE"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EEV-Kz-dMd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3081.1594202898555" y="-179.46428571428569"/>
         </scene>
@@ -633,7 +636,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0020" translatesAutoresizingMaskIntoConstraints="NO" id="D2L-Jy-rTf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="330" height="896"/>
                             </imageView>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xjb-aD-5IO">
                                 <rect key="frame" x="44" y="566" width="326" height="120"/>
@@ -1264,7 +1267,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="ch7-1E-JN6">
-                                <rect key="frame" x="0.0" y="0.0" width="416" height="1268"/>
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="900.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ch7-1E-JN6" secondAttribute="height" multiplier="207:448" id="Qbu-Ad-hgE"/>
                                 </constraints>
@@ -1465,7 +1468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UNADJUSTEDNONRAW_thumb_2" translatesAutoresizingMaskIntoConstraints="NO" id="hx6-gg-yhw">
-                                <rect key="frame" x="0.0" y="0.0" width="415" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="619" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hx6-gg-yhw" secondAttribute="height" multiplier="207:448" id="JfN-Dm-dlj"/>
                                 </constraints>
@@ -1498,7 +1501,7 @@
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VZ-F2-3NN">
-                                <rect key="frame" x="0.0" y="44" width="415" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="619" height="44"/>
                                 <items>
                                     <navigationItem title="げーむりすと" id="qFZ-q3-90U">
                                         <barButtonItem key="leftBarButtonItem" title="＜Back" id="cBB-rV-zGs">
@@ -1812,7 +1815,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="FTD-QI-8FP"/>
         <segue reference="Ljo-05-I0h"/>
-        <segue reference="mJ0-Ns-xPe"/>
+        <segue reference="SJf-cD-eZ8"/>
         <segue reference="ayN-3Y-OIE"/>
         <segue reference="CSb-E9-eGA"/>
         <segue reference="b76-jY-P7o"/>
