@@ -825,7 +825,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="lun-N7-Jfe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1662,7 +1662,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="n2X-k6-Ak5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1805,13 +1805,12 @@
         <image name="google.png" width="18" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KcH-Pg-p7F"/>
         <segue reference="FTD-QI-8FP"/>
         <segue reference="KOY-vQ-4iG"/>
         <segue reference="fHG-ZV-FLi"/>
         <segue reference="5Sy-nU-xP9"/>
         <segue reference="CSb-E9-eGA"/>
         <segue reference="b76-jY-P7o"/>
-        <segue reference="SVh-wb-W8H"/>
+        <segue reference="uKb-vD-Yrz"/>
     </inferredMetricsTieBreakers>
 </document>
