@@ -102,9 +102,10 @@ class MyPageViewController: UIViewController, UITableViewDataSource, UITableView
     //テーブルの削除
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            DBRef.child("games").child("\(mygamelist[indexPath.row].id)").removeValue()
+            if let newuid = uid{ DBRef.child("games").child(newuid).child("\(mygamelist[indexPath.row].id)").removeValue()
             mygamelist.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            }
         }
     }
 

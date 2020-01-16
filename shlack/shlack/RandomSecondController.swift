@@ -15,7 +15,8 @@ class RandomSecondController: UIViewController {
     
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var gameNumber: UILabel!
-    @IBOutlet weak var gameRule: UILabel!
+
+    @IBOutlet weak var gameRule: UITextView!
     @IBOutlet weak var maker: UILabel!
     
     /*let toonPath = Bundle.main.bundleURL.appendingPathComponent("yeah!.mp3")
