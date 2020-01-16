@@ -132,10 +132,10 @@ class HomeViewController: UIViewController, GIDSignInUIDelegate {
         }
 
         
-        self.toRandom2.frame.origin.x = CGFloat(screenWidth/10)
+        /*self.toRandom2.frame.origin.x = CGFloat(screenWidth/10)
         self.toRandom2.frame.origin.y = CGFloat(screenHeight*3/5)
         self.toRandom2.frame.size.width = CGFloat(screenWidth*4/5)
-        self.toRandom2.frame.size.height = CGFloat(screenHeight/7)
+        self.toRandom2.frame.size.height = CGFloat(screenHeight/7)*/
         
 //        self.all.frame.origin.x = CGFloat(screenWidth/10)
 //        self.all.frame.origin.y = CGFloat(screenHeight*27/35)
